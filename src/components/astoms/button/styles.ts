@@ -1,0 +1,39 @@
+import { createStyles, makeStyles, Theme } from '@material-ui/core';
+
+const useStyles = makeStyles((theme: Theme) => createStyles({
+  root: {
+    width: 180,
+    color: '#0B7880',
+    background: '#17F0FF',
+    fontSize: 20,
+    fontWeight: 700,
+    textAlign: 'center',
+    borderRadius: 20,
+    padding: '1.25rem 0',
+    cursor: 'pointer',
+    transition: 'all 0.2s ease',
+    '@media screen and (max-width: 1640px)': {
+      fontSize: '1em',
+      padding: '1vw 0',
+      width: 160,
+    },
+    '@media screen and (max-width: 768px)': {
+      fontSize: '13px',
+      padding: '0.5rem 0',
+      borderRadius: '10px',
+      width: 120,
+      '&.small': {
+        fontSize: '14px',
+        padding: '0.8rem 0',
+        borderRadius: '10px',
+        width: 140,
+      },
+    },
+
+    '&:hover': {
+      opacity: 0.8,
+    },
+  },
+}));
+
+export default useStyles;
