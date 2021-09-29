@@ -7,6 +7,12 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     borderRadius: 20,
     border: '1px solid #17F0FF',
     overflow: 'hidden',
+    '@media screen and (max-width: 1640px)': {
+      maxWidth: '65vw'
+    },
+    '@media screen and (max-width: 768px)': {
+      maxWidth: '100%'
+    }
   },
   header: {
     padding: '1.75rem 3rem',
@@ -15,6 +21,12 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       fontWeight: 700,
       color: '#F4E0FF',
 
+    },
+    '@media screen and (max-width: 1640px)': {
+      padding: '2.5vw 3vw',
+      '& .title': {
+        fontSize: '2vw',
+      },
     },
     '@media screen and (max-width: 768px)': {
       padding: '1.25rem 1rem 1.25rem',
@@ -33,7 +45,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       alignItems: 'center',
       fontWeight: 700,
       color: '#D47DFF',
-      cursor: 'pointer',
       fontSize: 24,
       textTransform: 'uppercase',
       marginBottom: '2rem',
@@ -45,6 +56,23 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       },
       '& li:nth-child(3)': {
         width: '42%',
+      },
+      '@media screen and (max-width: 1640px)': {
+        fontSize: '1.5vw',
+        marginBottom: '2vw',
+      },
+      '@media screen and (max-width: 1024px)': {
+        fontSize: '2vw',
+        '& li:nth-child(1)': {
+          width: '20%',
+        },
+        '& li:nth-child(2)': {
+          width: '44.5%',
+        },
+        '& li:nth-child(3)': {
+          width: 'auto',
+          textAlign: 'center',
+        },
       },
       '@media screen and (max-width: 768px)': {
         fontSize: 16,
@@ -81,6 +109,14 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
           '& span:nth-child(1)': {
             display: 'inline-block',
             minWidth: 145,
+
+            '@media screen and (max-width: 1024px)': {
+              minWidth: '15vw',
+            },
+            '@media screen and (max-width: 768px)': {
+              minWidth: 'auto',
+              display: 'block'
+            }
           },
           '& span:nth-child(2)': {
             color: '#BCBCBC',
@@ -102,7 +138,26 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         '&:hover': {
           opacity: 0.6,
         },
+        '@media screen and (max-width: 1024px)': {
+          fontSize: '1.75vw',
+          '& p:nth-child(2)': {
+            width: '45%',
+            '& span:nth-child(1)': {
+              '@media screen and (max-width: 768px)': {
+                minWidth: 'auto',
+                display: 'block'
+              }
+            },
+            '& span:nth-child(2)': {
+            }
+          },
+          '& p:nth-child(3)': {
+            width: '35%',
+            fontSize: '2vw',
+          },
+        },
         '@media screen and (max-width: 768px)': {
+          fontSize: '14px',
           alignItems: 'flex-start',
           lineHeight: '1.2rem',
           '& + li': {
@@ -112,14 +167,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
             width: '18%',
           },
           '& p:nth-child(2)': {
-            width: '54%',
-            '& span:nth-child(1)': {
-              minWidth: 'auto',
-              display: 'block'
-            },
+            width: '52%',
           },
           '& p:nth-child(3)': {
-            width: '28%',
+            width: '30%',
             fontSize: 18,
             '& span:nth-child(2)': {
               maxWidth: 18,
@@ -131,6 +182,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       '@media screen and (max-width: 768px)': {
         maxHeight: 300,
       },
+    },
+    '@media screen and (max-width: 1640px)': {
+      padding: '2.5vw 3vw',
     },
     '@media screen and (max-width: 768px)': {
       padding: '1.25rem 1rem 1.25rem',

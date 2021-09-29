@@ -7,6 +7,12 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     borderRadius: 20,
     border: '1px solid #17F0FF',
     overflow: 'hidden',
+    '@media screen and (max-width: 1640px)': {
+      maxWidth: '65vw'
+    },
+    '@media screen and (max-width: 768px)': {
+      maxWidth: '100%'
+    }
   },
   header: {
     padding: '1.75rem 3rem',
@@ -35,6 +41,21 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
           }
         }
       },
+      '@media screen and (max-width: 1640px)': {
+        marginBottom: '2vw',
+        '& .title': {
+          fontSize: '2vw',
+        },
+        '& ul': {
+          gap: '1vw',
+          '& li': {
+            padding: '0 0.5vw',
+            '& svg': {
+              maxWidth: '2.25vw'
+            },
+          }
+        },
+      },
       '@media screen and (max-width: 768px)': {
         marginBottom: '0.75rem',
         '& .title': {
@@ -51,10 +72,12 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         },
       },
     },
-    '@media screen and (max-width: 768px)': {
-      padding: '1.25rem 1rem 1.25rem',
+    '@media screen and (max-width: 1640px)': {
+      padding: '2.5vw 3vw',
     },
-
+    '@media screen and (max-width: 768px)': {
+      padding: '1.25rem 1rem',
+    },
   },
   infoRound: {
     display: 'flex',
@@ -75,6 +98,17 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       padding: '1rem 0',
       textAlign: 'center',
     },
+    '@media screen and (max-width: 1640px)': {
+      fontSize: '1.5vw',
+      paddingRight: '1vw',
+      borderRadius: '0.75vw',
+      '& span': {
+        display: 'inline-block',
+        borderRadius: '0.75vw',
+        width: '12vw',
+        padding: '1.25vw 0',
+      },
+    },
     '@media screen and (max-width: 768px)': {
       fontSize: 16,
       paddingRight: '0.75rem',
@@ -88,7 +122,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     display: 'flex',
     alignItems: 'flex-end',
     justifyContent: 'space-between',
-    marginBottom: '2rem',
     padding: '2rem 3rem',
     background: 'rgba(28, 25, 25, 0.8)',
     '& .text': {
@@ -108,6 +141,18 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       fontFamily: '\'Bungee\', cursive',
       color: '#D47DFF',
       paddingBottom: 4,
+    },
+    '@media screen and (max-width: 1640px)': {
+      '& .text': {
+        fontSize: '2.25vw',
+        width: '13vw',
+      },
+      '& .total': {
+        fontSize: '4.5vw',
+      },
+      '& .unit': {
+        fontSize: '2.75vw',
+      },
     },
     '@media screen and (max-width: 768px)': {
       display: 'block',
@@ -129,10 +174,14 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
   },
   footer: {
     textAlign: 'center',
-    padding: '1.5rem',
+    padding: '2.5rem 1.5rem',
     fontWeight: 500,
     fontSize: 24,
     wordBreak: 'break-word',
+    '@media screen and (max-width: 1640px)': {
+      padding: '2.5vw',
+      fontSize: '2.1vw',
+    },
     '@media screen and (max-width: 768px)': {
       padding: '1.25rem 1rem',
       fontSize: 20,

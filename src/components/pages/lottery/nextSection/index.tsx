@@ -1,10 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import useStyles from './styles';
 type Props = {
-  sendDataNextToLottery: (getDataNextTolottery: boolean) => void,
+  sendDataNextToLottery: (getDataNextTolottery: any) => void,
 }
 const NextSection: React.FC<Props> = ({sendDataNextToLottery}) => {
   const classes = useStyles();
+  const dataTicket = {
+    next_id: 15,
+    your_ticket: [
+      [11, 22, 11, 32, 11, 45],
+      [33, 22, 12, 43, 12, 16],
+      [24, 11, 12, 43, 12, 16],
+      [24, 11, 12, 43, 12, 16],
+      [24, 11, 12, 43, 12, 16],
+      [24, 11, 12, 43, 12, 16]
+    ]
+  }
+  const [data, setData] = useState({
+    view_ticket: false,
+    get_ticket: false,
+    next_round: dataTicket,
+  })
+  const handleViewTicket = (event: React.MouseEvent) => {
+    if(data.next_round.your_ticket.length > 0) {
+      sendDataNextToLottery({
+        next_round: dataTicket,
+        view_ticket: true,
+        get_ticket: false,
+      })
+    }
+  }
+  const handleGetTicket = (event: React.MouseEvent) => {
+    sendDataNextToLottery({
+      next_round: {
+        next_id: -1,
+        your_ticket: []
+      },
+      view_ticket: false,
+      get_ticket: true,
+    })
+  }
   return (
     <div className={`${classes.root}`}>
       <div className={`${classes.container}`}>
@@ -17,9 +52,9 @@ const NextSection: React.FC<Props> = ({sendDataNextToLottery}) => {
           <div className={`${classes.footer}`}>
             <div className="yourticket">
               <p>Your Ticket</p>
-              <p>You have <span>0 ticket</span> to enter this party.</p>
+              <p>You have <span onClick={handleViewTicket}>{data.next_round.your_ticket.length} ticket</span> to enter this party.</p>
             </div>
-            <p className="getticket" onClick={() => sendDataNextToLottery(true)}>Get it now {`>`}</p>
+            <p className="getticket" onClick={handleGetTicket}>Get it now {`>`}</p>
           </div>
         </div>
       </div>

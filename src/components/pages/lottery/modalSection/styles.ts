@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     borderRadius: 20,
     border: '1px solid #17F0FF',
     width: 420,
+    overflow: 'hidden',
     '@media screen and (max-width: 768px)': {
       width: '100%',
       maxWidth: 'calc(375px - 6%)',
@@ -40,6 +41,27 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+
+    '&.hasID': {
+      borderBottom: 0,
+      padding: '1.25rem 1.5rem',
+      '& span': {
+        background: 'rgba(140, 36, 191, 0.5)',
+        display: 'inline-block',
+        fontSize: 20,
+        cursor: 'default',
+        margin: '0 0 0 0.5rem',
+        borderRadius: 10,
+        padding: '0.75rem 1.5rem',
+        '&:hover': {
+          opacity: 1
+        },
+        '@media screen and (max-width: 768px)': {
+          fontSize: 16,
+          padding: '0.5rem 1.25rem',
+        }
+      }
+    },
 
     '& .title': {
       fontSize: 20,

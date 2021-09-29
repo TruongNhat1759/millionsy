@@ -22,6 +22,16 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         color: '#FFE0FD',
         marginTop: '1rem',
       },
+      '@media screen and (max-width: 1640px)': {
+        fontSize: '7.5vw',
+        marginBottom: '4vw',
+        '& sup': {
+          fontSize: '4.5vw',
+        },
+        '& span': {
+          fontSize: '2.15vw',
+        },
+      },
       '@media screen and (max-width: 768px)': {
         marginBottom: '2rem',
         fontSize: 56,
@@ -62,6 +72,12 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     borderRadius: 20,
     border: '1px solid #17F0FF',
     overflow: 'hidden',
+    '@media screen and (max-width: 1640px)': {
+      maxWidth: '65vw',
+    },
+    '@media screen and (max-width: 768px)': {
+      maxWidth: '100%',
+    }
   },
   header: {
     padding: '2rem 3rem',
@@ -70,6 +86,13 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       fontWeight: 700,
       color: '#F4E0FF',
       marginBottom: '2rem',
+    },
+    '@media screen and (max-width: 1640px)': {
+      padding: '2.5vw 3vw',
+      '& .title': {
+        fontSize: '2vw',
+        marginBottom: '2vw',
+      },
     },
     '@media screen and (max-width: 768px)': {
       padding: '1.25rem 1rem 1.75rem',
@@ -98,33 +121,56 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       padding: '1rem 0',
       textAlign: 'center',
     },
+    '@media screen and (max-width: 1640px)': {
+      fontSize: '1.5vw',
+      paddingRight: '1vw',
+      borderRadius: '0.75vw',
+      '& span': {
+        display: 'inline-block',
+        borderRadius: '0.75vw',
+        width: '12vw',
+        padding: '1.25vw 0',
+      },
+    },
     '@media screen and (max-width: 768px)': {
       fontSize: 16,
       paddingRight: '0.75rem',
+      borderRadius: '10px',
       '& span': {
         width: 72,
+        borderRadius: '10px',
+        padding: '1rem 0',
       },
     },
   },
   footer: {
     borderTop: '1px solid #616161',
-    padding: '2rem 2rem 3rem',
+    padding: '2rem 3rem',
     color: '#F4E0FF',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
     '& .yourticket': {
       '& p:nth-child(1)': {
-        fontSize: 28,
+        fontSize: 24,
         fontWeight: 700,
-        marginBottom: '1.5rem',
+        marginBottom: '0.75rem',
         color: '#F4E0FF',
       },
       '& p:nth-child(2)': {
-        fontSize: 24,
+        fontSize: 20,
         '& span': {
           fontWeight: 700,
           cursor: 'pointer',
+        }
+      },
+      '@media screen and (max-width: 1024px)': {
+        '& p:nth-child(1)': {
+          fontSize: '2vw',
+          marginBottom: '0.75vw',
+        },
+        '& p:nth-child(2)': {
+          fontSize: '1.75vw',
         }
       },
       '@media screen and (max-width: 768px)': {
@@ -153,6 +199,15 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         opacity: 0.8,
       }
     },
+    '@media screen and (max-width: 1640px)': {
+      padding: '2.5vw 3vw',
+      '& .getticket': {
+        width: '22vw',
+        padding: '1.4vw 0',
+        fontSize: '2vw',
+        borderRadius: '0.75vw',
+      }
+    },
     '@media screen and (max-width: 768px)': {
       padding: '1.5rem 1rem 2rem',
       display: 'block',
@@ -160,7 +215,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         width: 150,
         padding: '1rem 0',
         fontSize: 16,
-        margin: '0 auto'
+        margin: '0 auto',
+        borderRadius: '10px',
       }
     },
   },

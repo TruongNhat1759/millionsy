@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import useStyles from './styles';
-const Yours: React.FC = () => {
+import { dataTest } from 'data/db';
+type Props = {
+  dataGiveFromYours: (getDataFromYours: any) => void,
+}
+const Yours: React.FC<Props> = ({dataGiveFromYours}) => {
   const classes = useStyles();
   const [data, setData] = useState([]);
   
   useEffect(()=>{
-    fetch('http://localhost:3000/round_history')
-    .then(res => res.json())
-    .then(data => setData(data.reverse()))
+    // fetch('http://localhost:3000/round_history')
+    // .then(res => res.json())
+    // .then(data => setData(data.reverse()))
+    setData(JSON.parse(JSON.stringify(dataTest.round_history)).reverse())
   }, [])
   
 
@@ -17,7 +22,7 @@ const Yours: React.FC = () => {
       return time < 10 ?  '0' + time : time;
     }
     return (
-      <li key={el.id}>
+      <li key={el.id} onClick={() => dataGiveFromYours(data[data.length - el.id])}>
         <p>{el.id}</p>
         <p>
           <span>{`${formatTime(date.getDate())} thg ${date.getMonth()}, ${date.getFullYear()}`}</span>
@@ -39,7 +44,7 @@ const Yours: React.FC = () => {
         <ul className="listLabel">
           <li>#</li>
           <li>Date</li>
-          <li>Your<br className="sp-425"/> tickets</li>
+          <li>Your<br className="sp-768"/> tickets</li>
         </ul>
         <ul className="listRound">
           {data.map((el) => (handleRenderRoundItems(el)))}

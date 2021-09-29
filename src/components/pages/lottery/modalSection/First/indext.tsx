@@ -5,6 +5,8 @@ type Props = {
   dataGiveFirst: (getDataFirst: any) => void,
 }
 const First: React.FC<Props> = ({dataGiveFirst}) => {
+  
+  
   const classes = useStyles();
   const [data, setData] = useState({
     data: {
@@ -21,7 +23,6 @@ const First: React.FC<Props> = ({dataGiveFirst}) => {
         ticketCount: event.target.value !== '' ? parseInt(event.target.value) : 0,
         price: event.target.value !== '' ? data.data.unit * parseInt(event.target.value) : 0,
         tickets: Array(parseInt(event.target.value)).fill(0).map(() => Array(6).fill(0).map(() => Math.floor(Math.random() * 45) + 1))
-        
       }
     })
   };

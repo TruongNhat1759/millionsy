@@ -2,6 +2,7 @@ import React from 'react';
 import useStyles from './styles';
 import Title from 'components/astoms/title/DefaultTitle';
 import DefaultButon from 'components/astoms/button/DefaultButton';
+import { isConnect } from 'data/db';
 const Header: React.FC = () => {
   const classes = useStyles();
   return (
@@ -14,7 +15,7 @@ const Header: React.FC = () => {
         <div className={`${classes.content}`}>
           <Title text={['We start', <br/>,'the next Lottery',<br/>, 'generation']}></Title>
           <p className={`${classes.text}`}>The first crosschain Lottery ever<br className="sp-768" /> powered by Solana</p>
-          <DefaultButon text={'Connect Wallet'} small="small"></DefaultButon>
+          <DefaultButon text={'Connect Wallet'} small="small" connect={isConnect}></DefaultButon>
         </div>
       </div>
     </div>

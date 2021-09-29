@@ -11,13 +11,16 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       textAlign: 'center',
       textTransform: 'uppercase',
       '@media screen and (max-width: 1640px)': {
-        fontSize: '3.5vw',
-        marginBottom: '2rem',
+        fontSize: '4vw',
+        marginBottom: '2vw',
       },
       '@media screen and (max-width: 768px)': {
         fontSize: 30,
         marginBottom: '2.5rem',
       },
+    },
+    '@media screen and (max-width: 1640px)': {
+      padding: '7vw 0 8vw',
     },
     '@media screen and (max-width: 768px)': {
       padding: '3rem 0 6rem',
@@ -106,7 +109,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     marginBottom: '1.5rem',
     '@media screen and (max-width: 1640px)': {
       fontSize: '2.1vw',
-      marginBottom: '1rem',
+      marginBottom: '1vw',
     },
     '@media screen and (max-width: 768px)': {
       fontSize: 24,
@@ -116,7 +119,11 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
   content: {
     display: 'block',
     lineHeight: '1.4rem',
+    '@media screen and (max-width: 1640px)': {
+      fontSize: '16px',
+    },
     '@media screen and (max-width: 768px)': {
+      fontSize: 14,
       lineHeight: '1.2rem',
     },
   },

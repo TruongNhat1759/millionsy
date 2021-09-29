@@ -96,7 +96,6 @@ const Third: React.FC<Props> = ({dataSendThird, dataGiveThird}) => {
               </dl>
             ))
           }
-          
         </div>
       </div>
       <p className={`${classes.lineGray}`}><span></span></p>

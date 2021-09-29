@@ -46,16 +46,16 @@ body {
 }
 
 * ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
 }
 
 * ::-webkit-scrollbar-thumb {
   background: #F8F8F8;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 * ::-webkit-scrollbar-track {
-  border-radius: 8px;
+  border-radius: 4px;
   background: transparent;
 }
 
@@ -87,12 +87,12 @@ body {
   }
 }
 
-@media screen and (max-width: 425px) {
-  .pc-425 {
+@media screen and (max-width: 475px) {
+  .pc-475 {
     display: none;
   }
 
-  .sp-425 {
+  .sp-475 {
     display: block;
   }
 }

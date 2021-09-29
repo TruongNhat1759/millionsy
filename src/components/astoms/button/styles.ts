@@ -12,10 +12,19 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     padding: '1.25rem 0',
     cursor: 'pointer',
     transition: 'all 0.2s ease',
+    '&.connected': {
+      color: '#fff',
+      background: '#A819FA',
+      cursor: 'default',
+      '&:hover': {
+        opacity: 1,
+      },
+    },
     '@media screen and (max-width: 1640px)': {
       fontSize: '1em',
       padding: '1vw 0',
       width: 160,
+      borderRadius: '1vw',
     },
     '@media screen and (max-width: 768px)': {
       fontSize: '13px',

@@ -5,6 +5,10 @@ import Second from './Second/indext';
 import Third from './Third/indext';
 import Four from './Four/indext';
 import Five from './Five/indext';
+import ViewTicket from './viewTicket/indext'; 
+import ConnectWallet from './ConnectWallet/indext';
+import ViewYour from './viewYour/indext';
+import ViewSubmit from './ViewSubmit';
 type Props = {
   dataModal: any,
   dataGiveFromModal: (getDataModalTolottery: any) => void,
@@ -14,12 +18,21 @@ const ModalContent: React.FC<Props> = ({dataModal, dataGiveFromModal}) => {
   const classes = useStyles();
   const [dataSendLottery, setDataSendLottery] = useState({
     data: {
+      is_connect: dataModal.is_connect,
       show: false,
       first: false,
       second: false,
       third: false,
       four: false,
       five: false,
+      submit: false,
+      view_ticket: false,
+      next_round: {
+        next_id: -1,
+        your_ticket: []
+      },
+      view_your: false,
+      your_ticket: [],
     }
   });
 
@@ -30,12 +43,21 @@ const ModalContent: React.FC<Props> = ({dataModal, dataGiveFromModal}) => {
   const dataGiveFirst = (getDataFirst: any) => {
     setDataSendLottery({
       data: {
+        next_round: {
+          next_id: -1,
+          your_ticket: []
+        },
+        is_connect: dataModal.is_connect,
         show: true,
         first: false,
         second: true,
         third: false,
         four: false,
         five: false,
+        submit: false,
+        view_ticket: false,
+        view_your: false,
+        your_ticket: [],
       }
     })
     
@@ -52,12 +74,21 @@ const ModalContent: React.FC<Props> = ({dataModal, dataGiveFromModal}) => {
   const dataGiveSecond = (getDataSecond: any) => {
     setDataSendLottery({
       data: {
+        next_round: {
+          next_id: -1,
+          your_ticket: []
+        },
+        is_connect: dataModal.is_connect,
         show: true,
         first: false,
         second: false,
         third: getDataSecond.third,
         four: false,
         five: getDataSecond.five,
+        submit: false,
+        view_ticket: false,
+        view_your: false,
+        your_ticket: [],
       }
     })
     
@@ -74,12 +105,21 @@ const ModalContent: React.FC<Props> = ({dataModal, dataGiveFromModal}) => {
   const dataGiveThird = (getDataThird: any) => {
     setDataSendLottery({
       data: {
+        next_round: {
+          next_id: -1,
+          your_ticket: []
+        },
+        is_connect: dataModal.is_connect,
         show: true,
         first: false,
         second: getDataThird.second,
         third: false,
         four: getDataThird.four,
         five: getDataThird.five,
+        submit: false,
+        view_ticket: false,
+        view_your: false,
+        your_ticket: [],
       }
     })
     
@@ -94,12 +134,21 @@ const ModalContent: React.FC<Props> = ({dataModal, dataGiveFromModal}) => {
   const dataGiveFour = (getDataFour: any) => {
     setDataSendLottery({
       data: {
+        next_round: {
+          next_id: -1,
+          your_ticket: []
+        },
+        is_connect: dataModal.is_connect,
         show: true,
         first: false,
         second: false,
         third: true,
         four: false,
         five: false,
+        submit: false,
+        view_ticket: false,
+        view_your: false,
+        your_ticket: [],
       }
     })
     setDataTicketModal({
@@ -114,39 +163,94 @@ const ModalContent: React.FC<Props> = ({dataModal, dataGiveFromModal}) => {
   const dataGiveFive = (getDataFive: any) => {
     setDataSendLottery({
       data: {
+        next_round: {
+          next_id: -1,
+          your_ticket: []
+        },
+        is_connect: dataModal.is_connect,
         show: true,
         first: false,
         second: false,
         third: getDataFive.third,
         four: false,
         five: false,
+        submit: false,
+        view_ticket: false,
+        view_your: false,
+        your_ticket: [],
+      }
+    })
+  }
+  const dataGiveViewTicket = (getDataViewTicket: boolean) => {
+    setDataSendLottery({
+      data: {
+        next_round: {
+          next_id: -1,
+          your_ticket: []
+        },
+        is_connect: dataModal.is_connect,
+        show: true,
+        first: getDataViewTicket,
+        second: false,
+        third: false,
+        four: false,
+        five: false,
+        submit: false,
+        view_ticket: false,
+        view_your: false,
+        your_ticket: [],
       }
     })
   }
   useEffect(() => {
     dataGiveFromModal(dataSendLottery.data);
   }, [dataSendLottery])
-
+  
   return (
     <>
-      {dataModal.show ? (
+      {dataModal.show && !dataModal.submit ? (
         <div className={`${classes.root}`}>
-          <div className={`${classes.backgroundModal}`} onClick={() => dataGiveFromModal({data: { show: false, first: false, second: false, third: false, four: false}})}></div>
+          <div className={`${classes.backgroundModal}`} onClick={() => dataGiveFromModal({
+            show: false,
+            first: false,
+            second: false,
+            third: false,
+            four: false,
+            five: false,
+            submit: false,
+            view_ticket: false,
+            is_connect: dataModal.is_connect,
+            next_round: {
+              next_id: -1,
+              your_ticket: []
+            },
+            view_your: false,
+            your_ticket: [],
+          })}></div>
           <div className={`${classes.content}`}>
-            <div className={`${classes.header}`}>
-              {dataModal.first ? (<p className="title">Buy Tickets</p>) : ''}
-              {dataModal.second ? (<p className="title">Buy Tickets</p>) : ''}
-              {dataModal.third ? (
+            <div className={`${classes.header} ${(dataModal.view_ticket || dataModal.view_your) && dataModal.is_connect ? 'hasID' : ''}`}>
+              {dataModal.first && dataModal.is_connect ? (<p className="title">Buy Tickets</p>) : ''}
+              {dataModal.second && dataModal.is_connect ? (<p className="title">Buy Tickets</p>) : ''}
+              {dataModal.third && dataModal.is_connect ? (
                 <p className="title">
                   <span 
                     onClick={() => setDataSendLottery({
                       data: {
+                        next_round: {
+                          next_id: -1,
+                          your_ticket: []
+                        },
+                        is_connect: dataModal.is_connect,
                         show: true,
                         first: false,
                         second: true,
                         third: false,
                         four: false,
                         five: false,
+                        submit: false,
+                        view_ticket: false,
+                        view_your: false,
+                        your_ticket: [],
                       }
                     })}
                   >
@@ -157,17 +261,26 @@ const ModalContent: React.FC<Props> = ({dataModal, dataGiveFromModal}) => {
                   Edit numbers
                 </p>
               ) : ''}
-              {dataModal.four ? (
+              {dataModal.four && dataModal.is_connect ? (
                 <p className="title">
                   <span 
                     onClick={() => setDataSendLottery({
                       data: {
+                        next_round: {
+                          next_id: -1,
+                          your_ticket: []
+                        },
+                        is_connect: dataModal.is_connect,
                         show: true,
                         first: false,
                         second: false,
                         third: true,
                         four: false,
                         five: false,
+                        submit: false,
+                        view_ticket: false,
+                        view_your: false,
+                        your_ticket: [],
                       }
                     })}
                   >
@@ -178,17 +291,26 @@ const ModalContent: React.FC<Props> = ({dataModal, dataGiveFromModal}) => {
                   Edit numbers
                 </p>
               ) : ''}
-              {dataModal.five ? (
+              {dataModal.five && dataModal.is_connect ? (
                 <p className="title">
                   <span 
                     onClick={() => setDataSendLottery({
                       data: {
+                        next_round: {
+                          next_id: -1,
+                          your_ticket: []
+                        },
+                        is_connect: dataModal.is_connect,
                         show: true,
                         first: false,
                         second: true,
                         third: false,
                         four: false,
                         five: false,
+                        submit: false,
+                        view_ticket: false,
+                        view_your: false,
+                        your_ticket: [],
                       }
                     })}
                   >
@@ -199,16 +321,54 @@ const ModalContent: React.FC<Props> = ({dataModal, dataGiveFromModal}) => {
                   Edit numbers
                 </p>
               ) : ''}
-              <p className="close" onClick={() => dataGiveFromModal({data: { show: false, first: false, second: false, third: false, four: false}})}><img src="assets/common/icon_close.svg" alt="close"/></p>
+              {dataModal.view_ticket && dataModal.is_connect ? (
+                <p className="title">
+                  Round
+                  <span>#15</span>
+                </p>
+              ) : ''}
+              {dataModal.view_your && dataModal.is_connect ? (
+                <p className="title">
+                  Round
+                  <span>#15</span>
+                </p>
+              ) : ''}
+              {!dataModal.is_connect ? (
+                <p className="title">Connect Wallet</p>
+              ) : ''}
+              <p className="close" onClick={() => dataGiveFromModal({
+                show: false,
+                first: false,
+                second: false,
+                third: false,
+                four: false,
+                five: false,
+                submit: false,
+                view_ticket: false,
+                is_connect: dataModal.is_connect,
+                next_round: {
+                  next_id: -1,
+                  your_ticket: []
+                },
+                view_your: false,
+                your_ticket: [],
+              })}><img src="assets/common/icon_close.svg" alt="close"/></p>
             </div>
-            {dataModal.first ? (<First dataGiveFirst={dataGiveFirst}></First>) : ''}
-            {dataModal.second ? (<Second dataGiveSecond={dataGiveSecond} dataSendSecond={dataTicketModal}></Second>) : ''}
-            {dataModal.third ? (<Third dataGiveThird={dataGiveThird} dataSendThird={dataTicketModal}></Third>) : ''}
-            {dataModal.four ? (<Four dataGiveFour={dataGiveFour} dataSendFour={dataTicketModal}></Four>) : ''}
-            {dataModal.five ? (<Five dataGiveFive={dataGiveFive} dataSendFive={dataTicketModal}></Five>) : ''}
+            {dataModal.first && dataModal.is_connect ? (<First dataGiveFirst={dataGiveFirst}></First>) : ''}
+            {dataModal.second && dataModal.is_connect ? (<Second dataGiveSecond={dataGiveSecond} dataSendSecond={dataTicketModal}></Second>) : ''}
+            {dataModal.third && dataModal.is_connect ? (<Third dataGiveThird={dataGiveThird} dataSendThird={dataTicketModal}></Third>) : ''}
+            {dataModal.four && dataModal.is_connect ? (<Four dataGiveFour={dataGiveFour} dataSendFour={dataTicketModal}></Four>) : ''}
+            {dataModal.five && dataModal.is_connect ? (<Five dataGiveFive={dataGiveFive} dataSendFive={dataTicketModal}></Five>) : ''}
+            {dataModal.view_ticket && dataModal.is_connect ? (<ViewTicket dataGiveViewTicket={dataGiveViewTicket} dataSendViewTicket={dataModal}></ViewTicket>) : ''}
+            {dataModal.view_your && dataModal.is_connect ? (<ViewYour dataSendViewYour={dataModal}></ViewYour>) : ''}
+            {!dataModal.is_connect ? (<ConnectWallet></ConnectWallet>) : ''}
           </div>
         </div>
-      ) : ''}
+      ) : (
+        dataModal.show && dataModal.submit ? (
+          <ViewSubmit></ViewSubmit>
+        ) : ''
+      )}
     </>
   )
 }
