@@ -24,28 +24,29 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     margin: '0 auto',
     position: 'relative',
     transition: 'all 0.2s ease',
-    '@media screen and (max-width: 1640px)': {
+    '@media screen and (max-width: 1024px)': {
       padding: '0 3%',
     },
   },
   content: {
     maxWidth: '50%',
-    '@media screen and (max-width: 768px)': {
+    '@media screen and (max-width: 1640px)': {
+      padding: '0 3%',
       maxWidth: '100%',
     },
   },
   text: {
-    fontSize: 28,
+    fontSize: 20,
     fontWeight: 600,
     margin: '0.5rem 0 3.25rem',
     transition: 'all 0.2s ease',
-    '@media screen and (max-width: 1640px)': {
-      fontSize: '1.5vw',
-      margin: '0.25vw 0 2.5vw',
-    },
-    
+    // '@media screen and (max-width: 1640px)': {
+    //   fontSize: '1.5vw',
+    //   margin: '0.25vw 0 2.5vw',
+    // },
+
     '@media screen and (max-width: 768px)': {
-      fontSize: '14px',
+      fontSize: 14,
       lineHeight: '1.4rem',
       margin: '0.5rem 0',
     },
@@ -55,6 +56,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     right: 0,
     top: '-10%',
     zIndex: -1,
+    maxWidth: 600,
     transition: 'all 0.2s ease',
     '& li:nth-child(2)': {
       position: 'absolute',
@@ -62,10 +64,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       top: 0,
       animation: `${faceAnimate} 2.5s ease-in-out infinite alternate-reverse`
     },
-    '@media screen and (max-width: 1640px)': {
-      width: '40vw',
-      top: '-15%',
-      right: '3%',
+    '@media screen and (max-width: 1280px)': {
+      maxWidth: 400,
     },
     '@media screen and (max-width: 768px)': {
       position: 'relative',

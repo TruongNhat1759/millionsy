@@ -3,11 +3,11 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core';
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
     background: '#071526',
-    padding: '5.25rem 0',
-    borderTop: '1px solid #17F0FF',
-    '@media screen and (max-width: 1640px)': {
-      padding: '3em 0',
-    },
+    padding: '4.5rem 0',
+    borderTop: '1px solid #0B7880',
+    // '@media screen and (max-width: 1640px)': {
+    //   padding: '3em 0',
+    // },
     '@media screen and (max-width: 768px)': {
       padding: '3em 0 7rem',
     },
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     maxWidth: 1640,
     margin: '0 auto',
     transition: 'all 0.2s ease',
-    '@media screen and (max-width: 1640px)': {
+    '@media screen and (max-width: 1024px)': {
       padding: '0 3%',
     },
   },
@@ -32,10 +32,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       color: '#FFAC0A',
       marginBottom: '1.5rem',
       fontWeight: '700',
-      '@media screen and (max-width: 1640px)': {
-        fontSize: '1.5vw',
-        marginBottom: '1em',
-      },
+      // '@media screen and (max-width: 1640px)': {
+      //   fontSize: '1.5vw',
+      //   marginBottom: '1em',
+      // },
       '@media screen and (max-width: 768px)': {
         fontSize: '14px',
         marginBottom: '0.5rem',
@@ -50,10 +50,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       '&:hover': {
         textDecoration: 'underline'
       },
-      '@media screen and (max-width: 1640px)': {
-        fontSize: '1.5vw',
-        lineHeight: '2em',
-      },
+      // '@media screen and (max-width: 1640px)': {
+      //   fontSize: '1.5vw',
+      //   lineHeight: '2em',
+      // },
       '@media screen and (max-width: 768px)': {
         fontSize: '14px',
         lineHeight: '1.72em',
@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     '@media screen and (max-width: 640px)': {
       display: 'block',
       '& > div + div': {
-        marginTop: '3rem',
+        marginTop: '2rem',
       },
     },
   },
@@ -89,16 +89,16 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       fontSize: 18,
       color: '#C5C5C5',
     },
-    '@media screen and (max-width: 1640px)': {
-      marginTop: '2em',
-      '& .logo': {
-        fontSize: '3vw',
-      },
-      '& .copyright': {
-        fontSize: '1.25vw',
-      },
-    },
-    
+    // '@media screen and (max-width: 1640px)': {
+    //   marginTop: '2em',
+    //   '& .logo': {
+    //     fontSize: '3vw',
+    //   },
+    //   '& .copyright': {
+    //     fontSize: '1.25vw',
+    //   },
+    // },
+
     '@media screen and (max-width: 768px)': {
       '& .logo': {
         fontSize: '36px',
@@ -108,7 +108,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         paddingBottom: '4px',
       },
     },
-    
+
     '@media screen and (max-width: 640px)': {
       marginTop: '3.5em',
       display: 'block',

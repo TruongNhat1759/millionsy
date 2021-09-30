@@ -1,37 +1,36 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core';
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
-    marginTop: '-5rem',
     '& h3': {
       fontWeight: 400,
-      marginBottom: '4rem',
+      marginBottom: '2rem',
       textAlign: 'center',
-      fontSize: 120,
+      fontSize: 72,
       fontFamily: '\'Bungee\', cursive',
       color: '#D47DFF',
       textShadow: '0 10px 10px rgba(212, 125, 255, 0.25), 0 15px 15px rgba(212, 125, 255, 0.25)',
       '& sup': {
-        fontSize: 80,
+        fontSize: 50,
       },
       '& span': {
         display: 'block',
         textShadow: 'none',
         fontWeight: 700,
-        fontSize: 32,
+        fontSize: 24,
         fontFamily: '\'Lexend\', sans-serif',
         color: '#FFE0FD',
         marginTop: '1rem',
       },
-      '@media screen and (max-width: 1640px)': {
-        fontSize: '7.5vw',
-        marginBottom: '4vw',
-        '& sup': {
-          fontSize: '4.5vw',
-        },
-        '& span': {
-          fontSize: '2.15vw',
-        },
-      },
+      // '@media screen and (max-width: 1640px)': {
+      //   fontSize: '7.5vw',
+      //   marginBottom: '4vw',
+      //   '& sup': {
+      //     fontSize: '4.5vw',
+      //   },
+      //   '& span': {
+      //     fontSize: '2.15vw',
+      //   },
+      // },
       '@media screen and (max-width: 768px)': {
         marginBottom: '2rem',
         fontSize: 56,
@@ -54,10 +53,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     }
   },
   container: {
-    maxWidth: 1640,
+    maxWidth: 700,
     margin: '0 auto',
     transition: 'all 0.2s ease',
-    '@media screen and (max-width: 1640px)': {
+    '@media screen and (max-width: 1024px)': {
       padding: '0 3%',
     },
 
@@ -80,20 +79,20 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     }
   },
   header: {
-    padding: '2rem 3rem',
+    padding: '1.5rem 2rem',
     '& .title': {
-      fontSize: 28,
+      fontSize: 20,
       fontWeight: 700,
       color: '#F4E0FF',
-      marginBottom: '2rem',
+      marginBottom: '1rem',
     },
-    '@media screen and (max-width: 1640px)': {
-      padding: '2.5vw 3vw',
-      '& .title': {
-        fontSize: '2vw',
-        marginBottom: '2vw',
-      },
-    },
+    // '@media screen and (max-width: 1640px)': {
+    //   padding: '2.5vw 3vw',
+    //   '& .title': {
+    //     fontSize: '2vw',
+    //     marginBottom: '2vw',
+    //   },
+    // },
     '@media screen and (max-width: 768px)': {
       padding: '1.25rem 1rem 1.75rem',
       '& .title': {
@@ -106,32 +105,32 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    fontSize: 24,
+    fontSize: 20,
     color: '#F4E0FF',
     background: 'rgba(255, 255, 255, 0.25)',
     paddingRight: '1rem',
-    borderRadius: 10,
+    borderRadius: 5,
     overflow: 'hidden',
     '& span': {
       display: 'inline-block',
       fontWeight: 700,
       background: 'rgba(140, 36, 191, 0.5)',
-      borderRadius: 10,
-      width: 175,
-      padding: '1rem 0',
+      borderRadius: 5,
+      width: 100,
+      padding: '0.5rem 0',
       textAlign: 'center',
     },
-    '@media screen and (max-width: 1640px)': {
-      fontSize: '1.5vw',
-      paddingRight: '1vw',
-      borderRadius: '0.75vw',
-      '& span': {
-        display: 'inline-block',
-        borderRadius: '0.75vw',
-        width: '12vw',
-        padding: '1.25vw 0',
-      },
-    },
+    // '@media screen and (max-width: 1640px)': {
+    //   fontSize: '1.5vw',
+    //   paddingRight: '1vw',
+    //   borderRadius: '0.75vw',
+    //   '& span': {
+    //     display: 'inline-block',
+    //     borderRadius: '0.75vw',
+    //     width: '12vw',
+    //     padding: '1.25vw 0',
+    //   },
+    // },
     '@media screen and (max-width: 768px)': {
       fontSize: 16,
       paddingRight: '0.75rem',
@@ -145,20 +144,20 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
   },
   footer: {
     borderTop: '1px solid #616161',
-    padding: '2rem 3rem',
+    padding: '1.5rem 2rem',
     color: '#F4E0FF',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
     '& .yourticket': {
       '& p:nth-child(1)': {
-        fontSize: 24,
+        fontSize: 20,
         fontWeight: 700,
         marginBottom: '0.75rem',
         color: '#F4E0FF',
       },
       '& p:nth-child(2)': {
-        fontSize: 20,
+        fontSize: 18,
         '& span': {
           fontWeight: 700,
           cursor: 'pointer',
@@ -187,11 +186,11 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     '& .getticket': {
       background: '#17F0FF',
       textAlign: 'center',
-      width: 240,
+      width: 180,
       color: '#0B7880',
       borderRadius: 10,
       padding: '1rem 0',
-      fontSize: 24,
+      fontSize: 20,
       fontWeight: 700,
       cursor: 'pointer',
       transition: 'all 0.2s ease',
@@ -199,15 +198,15 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         opacity: 0.8,
       }
     },
-    '@media screen and (max-width: 1640px)': {
-      padding: '2.5vw 3vw',
-      '& .getticket': {
-        width: '22vw',
-        padding: '1.4vw 0',
-        fontSize: '2vw',
-        borderRadius: '0.75vw',
-      }
-    },
+    // '@media screen and (max-width: 1640px)': {
+    //   padding: '2.5vw 3vw',
+    //   '& .getticket': {
+    //     width: '22vw',
+    //     padding: '1.4vw 0',
+    //     fontSize: '2vw',
+    //     borderRadius: '0.75vw',
+    //   }
+    // },
     '@media screen and (max-width: 768px)': {
       padding: '1.5rem 1rem 2rem',
       display: 'block',

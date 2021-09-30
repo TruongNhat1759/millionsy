@@ -27,7 +27,8 @@ img {
 body {
   color: #fff;
   font-size: 16px;
-  background: #071526;
+  background: #071526 url(bg_party.svg) center top no-repeat;
+  background-size: 150% auto;
   font-family: 'Lexend', sans-serif;
   overflow-x: hidden;
   font-weight: 300;

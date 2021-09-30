@@ -5,23 +5,23 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     padding: '7.5rem 0 8.5rem',
     '& h3': {
       color: '#D47DFF',
-      fontSize: 62,
+      fontSize: 48,
       fontWeight: 700,
       marginBottom: '4rem',
       textAlign: 'center',
       textTransform: 'uppercase',
-      '@media screen and (max-width: 1640px)': {
-        fontSize: '4vw',
-        marginBottom: '2vw',
-      },
+      // '@media screen and (max-width: 1640px)': {
+      //   fontSize: '4vw',
+      //   marginBottom: '2vw',
+      // },
       '@media screen and (max-width: 768px)': {
         fontSize: 30,
         marginBottom: '2.5rem',
       },
     },
-    '@media screen and (max-width: 1640px)': {
-      padding: '7vw 0 8vw',
-    },
+    // '@media screen and (max-width: 1640px)': {
+    //   padding: '7vw 0 8vw',
+    // },
     '@media screen and (max-width: 768px)': {
       padding: '3rem 0 6rem',
     },
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     maxWidth: 1556,
     margin: '0 auto',
     transition: 'all 0.2s ease',
-    '@media screen and (max-width: 1640px)': {
+    '@media screen and (max-width: 1024px)': {
       padding: '0 3%',
     },
 
@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
   },
   item: {
     padding: '1.75rem',
-    borderRadius: 20,
+    borderRadius: 10,
     background: '#0E0E0E',
     border: '1px solid #3B6294',
     width: '32%',
@@ -70,9 +70,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       }
     },
 
-    '@media screen and (max-width: 1640px)': {
-      padding: '1.5rem',
-    },
+    // '@media screen and (max-width: 1640px)': {
+    //   padding: '1.5rem',
+    // },
     '@media screen and (max-width: 1236px)': {
       width: '49%',
     },
@@ -104,13 +104,13 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
   title: {
     display: 'block',
     color: '#D47DFF',
-    fontSize: 36,
+    fontSize: 24,
     fontWeight: 700,
-    marginBottom: '1.5rem',
-    '@media screen and (max-width: 1640px)': {
-      fontSize: '2.1vw',
-      marginBottom: '1vw',
-    },
+    marginBottom: '1rem',
+    // '@media screen and (max-width: 1640px)': {
+    //   fontSize: '2.1vw',
+    //   marginBottom: '1vw',
+    // },
     '@media screen and (max-width: 768px)': {
       fontSize: 24,
       marginBottom: '0.5rem',
@@ -119,9 +119,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
   content: {
     display: 'block',
     lineHeight: '1.4rem',
-    '@media screen and (max-width: 1640px)': {
-      fontSize: '16px',
-    },
+    // '@media screen and (max-width: 1640px)': {
+    //   fontSize: '16px',
+    // },
     '@media screen and (max-width: 768px)': {
       fontSize: 14,
       lineHeight: '1.2rem',

@@ -148,20 +148,17 @@ const All: React.FC<Props> = ({dataSendToAll, dataGiveAll}) => {
         {slide ? (
           <>
             Detail
-            <span>
-              <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 9L0.803849 -9.78799e-07L11.1962 -7.02746e-08L6 9Z" fill="#17F0FF"/>
-              </svg>
-            </span>
+            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6L0.535899 -6.52533e-07L7.4641 -4.68497e-08L4 6Z" fill="#17F0FF"/>
+            </svg>
           </>
         ) :
           <>
             Hide
             <span>
-            <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 0L11.1962 9L0.803848 9L6 0Z" fill="#17F0FF"/>
-            </svg>
-
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 0L7.4641 6L0.535898 6L4 0Z" fill="#17F0FF"/>
+              </svg>
             </span>
           </>
         }

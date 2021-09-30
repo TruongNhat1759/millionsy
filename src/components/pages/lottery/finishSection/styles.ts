@@ -7,20 +7,20 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     marginTop: '10rem',
     '& h3': {
       color: '#D47DFF',
-      fontSize: 62,
+      fontSize: 48,
       fontWeight: 700,
       marginBottom: '3rem',
       textAlign: 'center',
       textTransform: 'uppercase',
     },
-    '@media screen and (max-width: 1640px)': {
-      padding: '10vw 0 8vw',
-      marginTop: '10vw',
-      '& h3': {
-        fontSize: '4vw',
-        marginBottom: '2vw',
-      },
-    },
+    // '@media screen and (max-width: 1640px)': {
+    //   padding: '10vw 0 8vw',
+    //   marginTop: '10vw',
+    //   '& h3': {
+    //     fontSize: '4vw',
+    //     marginBottom: '2vw',
+    //   },
+    // },
     '@media screen and (max-width: 768px)': {
       padding: '4rem 0',
       marginTop: '4rem',
@@ -31,13 +31,11 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
   },
   container: {
-    maxWidth: 1640,
+    maxWidth: 700,
     margin: '0 auto',
     transition: 'all 0.2s ease',
-    '@media screen and (max-width: 1640px)': {
-      padding: '0 3%',
-    },
     '@media screen and (max-width: 768px)': {
+      padding: '0 3%',
       maxWidth: 425,
     }
   },
@@ -49,11 +47,12 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     marginBottom: '3rem',
     '& li:not(.slash)': {
       border: '1px solid #A819FA',
-      borderRadius: 10,
+      borderRadius: 5,
+      fontSize: 20,
       fontWeight: 700,
-      width: 135,
+      width: 160,
       textAlign: 'center',
-      padding: '0.8rem 0',
+      padding: '0.75rem 0',
       boxSizing: 'border-box',
       cursor: 'pointer',
       transition: 'all 0.2s ease',
@@ -61,17 +60,18 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     '& li.active, & li:not(.slash):hover': {
       background: '#A819FA',
     },
-    '@media screen and (max-width: 1640px)': {
-      marginBottom: '3vw',
-      '& li.active, & li:not(.slash)': {
-        padding: '1vw 0',
-      },
-    },
+    // '@media screen and (max-width: 1640px)': {
+    //   marginBottom: '3vw',
+    //   '& li.active, & li:not(.slash)': {
+    //     padding: '1vw 0',
+    //   },
+    // },
     '@media screen and (max-width: 768px)': {
       gap: '0',
       marginBottom: '2rem',
       '& li.active, & li:not(.slash)': {
         padding: '0.5rem 0',
+        fontSize: 14,
       },
       '& li.slash': {
         margin: '0 0.25rem',

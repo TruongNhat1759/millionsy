@@ -27,17 +27,14 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     background: '#303030',
     borderRadius: 20,
     border: '1px solid #17F0FF',
-    width: 420,
+    fontSize: 16,
+    width: '100%',
+    maxWidth: 345,
     overflow: 'hidden',
-    '@media screen and (max-width: 768px)': {
-      width: '100%',
-      maxWidth: 'calc(375px - 6%)',
-      fontSize: 16,
-    }
   },
   header: {
-    padding: '2rem 1.5rem',
     borderBottom: '1px solid #616161',
+    padding: '1.5rem 1.25rem',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -48,18 +45,14 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       '& span': {
         background: 'rgba(140, 36, 191, 0.5)',
         display: 'inline-block',
-        fontSize: 20,
         cursor: 'default',
         margin: '0 0 0 0.5rem',
+        padding: '0.5rem 1.25rem',
+        fontSize: 16,
         borderRadius: 10,
-        padding: '0.75rem 1.5rem',
         '&:hover': {
           opacity: 1
         },
-        '@media screen and (max-width: 768px)': {
-          fontSize: 16,
-          padding: '0.5rem 1.25rem',
-        }
       }
     },
 
@@ -83,18 +76,14 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     '& .close': {
       cursor: 'pointer',
       transition: 'all 0.2s ease',
+      display: 'flex',
+      maxWidth: 18,
       '&:hover': {
         opacity: 0.8,
       }
     },
-    '@media screen and (max-width: 768px)': {
-      padding: '1.5rem 1.25rem',
-      '& .close': {
-        display: 'flex',
-        maxWidth: 18
-      },
-    }
-  },
-}));
+  }
+},
+));
 
 export default useStyles;

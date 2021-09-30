@@ -9,32 +9,80 @@ const Footer: React.FC = () => {
     {
       title: 'Platform',
       link: [
-        'Apply for IDO',
-        'How to buy ticket',
-        'Documents',
-        'Whitepaper',
-        'Support',
+        {
+          path: '/',
+          text: 'Apply for IDO'
+        },
+        {
+          path: 'https://docs.millionsy.io/lottery/how-to-buy-a-ticket-from-a-very-first-step',
+          text: 'How to buy ticket'
+        },
+        {
+          path: 'https://docs.millionsy.io',
+          text: 'Documents'
+        },
+        {
+          path: 'https://www.millionsy.io/whitepaper/',
+          text: 'Whitepaper'
+        },
+        {
+          path: 'https://t.me/MILLIONSYio',
+          text: 'Support'
+        },
       ]
     },
     {
       title: 'Token',
       link: [
-        'Roadmap',
-        'Token contract',
-        'Tokenomics',
-        'View on Coingecko',
-        'View on CoinMarketCap',
+        {
+          path: 'https://docs.millionsy.io/roadmap',
+          text: 'Roadmap'
+        },
+        {
+          path: 'https://docs.millionsy.io/milli',
+          text: 'Token contract'
+        },
+        {
+          path: 'asbsd',
+          text: 'Tokenomics'
+        },
+        {
+          path: 'asbsd',
+          text: 'View on Coingecko'
+        },
+        {
+          path: 'asbsd',
+          text: 'View on CoinMarketCap'
+        },
       ]
     },
     {
       title: 'Social links',
       link: [
-        'Twitter',
-        'Telegram',
-        'Telegram Channel',
-        'Youtube',
-        'Instagram',
-        'Medium',
+        {
+          path: 'https://twitter.com/MILLIONSYio',
+          text: 'Twitter'
+        },
+        {
+          path: 'https://t.me/MILLIONSYio',
+          text: 'Telegram'
+        },
+        {
+          path: 'https://t.me/MILLIONSYchannel',
+          text: 'Telegram Channel'
+        },
+        {
+          path: 'https://www.youtube.com/channel/UCjVsmNhXvonLIoE4mMyUiaw',
+          text: 'Youtube'
+        },
+        {
+          path: 'https://www.instagram.com/millionsyio/',
+          text: 'Instagram'
+        },
+        {
+          path: 'http://millionsyio.medium.com',
+          text: 'Medium'
+        },
       ]
     },
   ]
@@ -49,7 +97,7 @@ const Footer: React.FC = () => {
                 <ul>
                   {
                     item.link.map((itemLink, index) => (
-                      <li key={index}><a href="/">{itemLink}</a></li>
+                      <li key={index}><a href={itemLink.path}>{itemLink.text}</a></li>
                     ))
                   }
                 </ul>

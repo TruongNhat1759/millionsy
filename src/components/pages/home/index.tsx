@@ -3,7 +3,7 @@ import useStyles from './styles';
 import Title from 'components/astoms/title/DefaultTitle';
 import DefaultButon from 'components/astoms/button/DefaultButton';
 import { isConnect } from 'data/db';
-const Header: React.FC = () => {
+const Home: React.FC = () => {
   const classes = useStyles();
   return (
     <div className={`${classes.root}`}>
@@ -22,4 +22,4 @@ const Header: React.FC = () => {
   )
 }
 
-export default Header
+export default Home
