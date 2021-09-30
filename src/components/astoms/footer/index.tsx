@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
                 <ul>
                   {
                     item.link.map((itemLink, index) => (
-                      <li key={index}><a href={itemLink.path}>{itemLink.text}</a></li>
+                      <li key={index}><a href={itemLink.path} target="_blank">{itemLink.text}</a></li>
                     ))
                   }
                 </ul>

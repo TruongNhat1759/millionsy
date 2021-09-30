@@ -355,22 +355,22 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
           lineHeight: '1.25rem',
           fontSize: '12px',
         },
-        '@media screen and (max-width: 1640px)': {
-          '&:nth-child(1)': {
-            fontSize: '1.75vw',
-            fontWeight: 400,
-            color: '#F4E0FF',
-          },
-          '&:nth-child(2)': {
-            fontSize: '2.25vw',
-            fontWeight: 700,
-            color: '#D47DFF',
-          },
-          '&:nth-child(3)': {
-            lineHeight: '1.75vw',
-            fontSize: '1.4vw',
-          },
-        },
+        // '@media screen and (max-width: 1640px)': {
+        //   '&:nth-child(1)': {
+        //     fontSize: '1.75vw',
+        //     fontWeight: 400,
+        //     color: '#F4E0FF',
+        //   },
+        //   '&:nth-child(2)': {
+        //     fontSize: '2.25vw',
+        //     fontWeight: 700,
+        //     color: '#D47DFF',
+        //   },
+        //   '&:nth-child(3)': {
+        //     lineHeight: '1.75vw',
+        //     fontSize: '1.4vw',
+        //   },
+        // },
         '@media screen and (max-width: 768px)': {
           textAlign: 'left',
           '&:nth-child(1)': {

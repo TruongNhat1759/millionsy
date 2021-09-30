@@ -122,8 +122,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     // '@media screen and (max-width: 1640px)': {
     //   fontSize: '16px',
     // },
+    fontSize: 14,
     '@media screen and (max-width: 768px)': {
-      fontSize: 14,
       lineHeight: '1.2rem',
     },
   },

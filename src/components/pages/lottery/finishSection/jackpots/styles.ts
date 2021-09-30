@@ -187,10 +187,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     '@media screen and (max-width: 1024px)': {
       padding: '1.25rem 1rem',
       lineHeight: '1.7rem',
-      fontSize: 18,
+      fontSize: 16,
     },
     '@media screen and (max-width: 640px)': {
-      fontSize: 14,
+      fontSize: 10,
       padding: '1rem 0.5rem',
 
     },

@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     '& .copyright': {
       fontSize: 18,
-      color: '#C5C5C5',
+      color: '#F4E0FF',
     },
     // '@media screen and (max-width: 1640px)': {
     //   marginTop: '2em',
@@ -106,6 +106,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       '& .copyright': {
         fontSize: '12px',
         paddingBottom: '4px',
+        color: '#C5C5C5',
       },
     },
 

@@ -3,9 +3,9 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core';
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
     width: '100%',
-    // position: 'fixed',
-    // top: 0,
-    // left: 0,
+    position: 'fixed',
+    top: 0,
+    left: 0,
     background: '#071526',
     padding: '0.75rem 0',
     borderBottom: '1px solid #0B7880',
@@ -13,6 +13,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     alignItems: 'center',
     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
     zIndex: 100,
+    '&.active': {
+      top: '-100%',
+    },
     '& ul': {
       display: 'flex',
       alignItems: 'center',
@@ -27,6 +30,13 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         '&:hover': {
           color: '#B2FAFF',
         },
+        '&.active': {
+          color: '#B2FAFF',
+          fontWeight: 700,
+          '& path': {
+            fill: '#B2FAFF'
+          }
+        },
         '& span': {
           display: 'none',
           '@media screen and (max-width: 768px)': {
@@ -40,6 +50,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         // },
         '@media screen and (max-width: 768px)': {
           fontSize: '10px',
+          color: '#F4E0FF',
+          '&:hover': {
+            color: '#F4E0FF',
+          },
         }
       },
       '@media screen and (max-width: 768px)': {
@@ -104,11 +118,13 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     //   },
     // },
     '@media screen and (max-width: 768px)': {
+      gap: '0',
       '& img': {
         maxWidth: '37px',
       },
       '& span': {
-        display: 'none',
+        fontSize: 14,
+        marginLeft: '0.75rem',
       },
     }
   },
