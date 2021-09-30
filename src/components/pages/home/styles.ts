@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     padding: '15rem 0 18rem',
     transition: 'all 0.2s ease',
     '@media screen and (max-width: 768px)': {
-      padding: '5rem 0',
+      padding: '8rem 0 5rem',
     },
   },
   container: {

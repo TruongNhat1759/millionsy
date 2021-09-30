@@ -3,9 +3,12 @@ import FinishedSection from './finishSection';
 import GetSection from './getSection';
 import NextSection from './nextSection';
 import PartySection from './partySection';
-import ModalContent from './modalSection';
+import ModalContent from 'components/astoms/modalSection';
 import useStyles from './styles';
 import { isConnect } from 'data/db';
+import Star from 'components/astoms/star';
+import Header from 'components/astoms/header';
+import Footer from 'components/astoms/footer';
 const Lottery: React.FC = () => {
   const classes = useStyles();
   const [dataModal, setDataModal] = useState({
@@ -19,6 +22,7 @@ const Lottery: React.FC = () => {
       view_ticket: false,
       view_your: false,
       submit: false,
+      flag_submit: false,
       your_ticket: [],
       next_round: {
         next_id: -1,
@@ -56,6 +60,14 @@ const Lottery: React.FC = () => {
       }
     })
   }
+  const dataGiveFromHeader = (getDataHeader: any) => {
+    setDataModal({
+      data: {
+        ...dataModal.data,
+        show: true,
+      }
+    })
+  }
 
   const dataGiveFromModal = (getDataModalTolottery: any) => {
     setDataModal({
@@ -64,13 +76,19 @@ const Lottery: React.FC = () => {
   }
   
   return (
-    <div className={`${classes.root}`}>
-        <PartySection sendDataPartyToLottery={sendDataPartyToLottery}></PartySection>
-        <NextSection sendDataNextToLottery={sendDataNextToLottery}></NextSection>
-        <FinishedSection dataGiveFromFinished={dataGiveFromFinished}></FinishedSection>
-        <GetSection></GetSection>
-        <ModalContent dataModal={dataModal.data} dataGiveFromModal={dataGiveFromModal}></ModalContent>
-    </div>
+    <>
+      <Star></Star>
+      <Header dataGiveFromHeader={dataGiveFromHeader}></Header>
+      <div className={`${classes.root}`}>
+          <PartySection sendDataPartyToLottery={sendDataPartyToLottery}></PartySection>
+          <NextSection sendDataNextToLottery={sendDataNextToLottery}></NextSection>
+          <FinishedSection dataGiveFromFinished={dataGiveFromFinished}></FinishedSection>
+          <GetSection></GetSection>
+          <ModalContent dataModal={dataModal.data} dataGiveFromModal={dataGiveFromModal}></ModalContent>
+      </div>
+      <Footer></Footer>
+    </>
+    
   )
 }
 

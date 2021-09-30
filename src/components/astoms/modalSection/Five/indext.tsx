@@ -13,8 +13,8 @@ const Five: React.FC<Props> = ({dataSendFive, dataGiveFive}) => {
       tickets: dataSendFive.data.tickets,
       price: dataSendFive.data.price,
       third: false,
-      angree: false,
-      error: false,
+      submit: false,
+      flag_submit: false,
     }
   });
   const handleGoBack = (event: React.MouseEvent) => {
@@ -25,9 +25,18 @@ const Five: React.FC<Props> = ({dataSendFive, dataGiveFive}) => {
       }
     })
   }
+  const handleSubmit = (event: React.MouseEvent) => {
+    setData({
+      data: {
+        ...data.data,
+        submit: true,
+        flag_submit: true,
+      }
+    })
+  }
   
   useEffect(() => {
-    if(data.data.third || data.data.angree || data.data.error) {
+    if(data.data.third || data.data.submit) {
       dataGiveFive(data.data);
     }
   }, [data])
@@ -66,7 +75,7 @@ const Five: React.FC<Props> = ({dataSendFive, dataGiveFive}) => {
       <p className={`${classes.lineGray}`}><span></span></p>
       <div className={`${classes.footer}`}>
         <ul className={`${classes.listButton}`}>
-          <li className="confirming">
+          <li className="confirming" onClick={handleSubmit}>
             Confirming
             <span>
               <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">

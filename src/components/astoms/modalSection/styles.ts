@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     width: '100%',
     maxWidth: 345,
     overflow: 'hidden',
+    '&.error': {
+      border: '1px solid #A819FA',
+    }
   },
   header: {
     borderBottom: '1px solid #616161',
@@ -82,6 +85,17 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         opacity: 0.8,
       }
     },
+  },
+  closeSubmit: {
+    right: 0,
+    position: 'absolute',
+    top: 0,
+    cursor: 'pointer',
+    transition: 'all 0.2s ease',
+    padding: '1rem',
+    '&:hover': {
+      opacity: 0.6
+    }
   }
 },
 ));

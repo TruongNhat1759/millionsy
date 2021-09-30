@@ -5,7 +5,10 @@ import { useHistory } from "react-router-dom";
 import { isConnect } from 'data/db';
 import { Link } from 'react-router-dom';
 
-const Header: React.FC = () => {
+type Props = {
+  dataGiveFromHeader: (dataGiveFromHeader: any) => void,
+}
+const Header: React.FC<Props> = ({dataGiveFromHeader}) => {
   const classes = useStyles();
   const history = useHistory();
   const [offset, setOffset] = useState(false);
@@ -30,7 +33,7 @@ const Header: React.FC = () => {
             <li><Link to="/">Millipad</Link></li>
             <li><Link to="/">NFT Tickets</Link></li>
           </ul>
-          <DefaultButon text="Connect Wallet" connect={isConnect}></DefaultButon>
+          <DefaultButon text="Connect Wallet" connect={isConnect} onClick={() => !isConnect ? dataGiveFromHeader(true) : ''}></DefaultButon>
         </div>
       </div>
     </header>

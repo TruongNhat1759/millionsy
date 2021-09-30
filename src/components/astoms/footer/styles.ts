@@ -5,8 +5,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     background: '#071526',
     padding: '5.25rem 0 0',
     borderTop: '1px solid #0B7880',
-
-
     '@media screen and (max-width: 1640px)': {
       padding: '5.25rem 3% 0',
     },
@@ -128,6 +126,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       background: '#071526',
       zIndex: 99,
       display: 'flex',
+      fontSize: 9,
       '& a.active': {
         color: '#B2FAFF',
         fontWeight: 700,
