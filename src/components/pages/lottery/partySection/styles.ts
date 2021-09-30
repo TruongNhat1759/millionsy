@@ -1,10 +1,10 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core';
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
-    padding: '10rem 0',
+    padding: '11rem 0',
     marginBottom: '5rem',
-    background: 'url(assets/lottery/bg_left.png) top 40% left 15% no-repeat, url(assets/lottery/bg_right.png) top 40% right 15% no-repeat',
-    backgroundSize: '15vw 25vw, 15vw 14vw',
+    background: 'url(assets/lottery/bg_left.png) bottom right calc(50% + 450px) no-repeat, url(assets/lottery/bg_right.png) bottom 30% left calc(50% + 440px) no-repeat',
+    backgroundSize: '282px 488px, 316px 314px',
     '& h3': {
       fontWeight: 400,
       marginBottom: '2rem',
@@ -23,14 +23,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         color: '#F4E0FF',
         lineHeight: '3.5rem',
       },
-      '@media screen and (max-width: 1640px)': {
-        // fontSize: '7.5vw',
-        // marginBottom: '2vw',
-        // '& span': {
-        //   fontSize: '2.75vw',
-        //   lineHeight: '7vw',
-        // },
-      },
       '@media screen and (max-width: 768px)': {
         fontSize: 56,
         marginBottom: '0.5rem',
@@ -40,23 +32,17 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         },
       }
     },
-    // '@media screen and (max-width: 1640px)': {
-    //   padding: '8vw 0 16vw',
-    // },
     '@media screen and (max-width: 768px)': {
-      padding: '3rem 0 8rem',
+      padding: '10rem 0',
       marginBottom: '0',
-      background: 'url(assets/lottery/bg_left_sp.png) top 40% left 12% no-repeat, url(assets/lottery/bg_right_sp.png) top 40% right 12% no-repeat',
-      backgroundSize: '30px 208px, 18px 228px',
+      background: 'url(assets/lottery/bg_left_sp.png) top 60% right calc(50% + 130px) no-repeat, url(assets/lottery/bg_right_sp.png) center left calc(50% + 150px) no-repeat',
+      backgroundSize: '54px 375px, 28px 354px',
     },
   },
   container: {
     maxWidth: 1640,
     margin: '0 auto',
     transition: 'all 0.2s ease',
-    '@media screen and (max-width: 1024px)': {
-      padding: '0 3%',
-    },
   },
   buyticket: {
     position: 'relative',
@@ -82,15 +68,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     '&:hover': {
       opacity: 0.8,
     },
-    // '@media screen and (max-width: 1640px)': {
-    //   width: '25vw',
-    //   '& span': {
-    //     fontSize: '2.5vw',
-    //     padding: '1.2vw 0',
-    //     borderRadius: '1vw',
-    //     width: '18vw',
-    //   },
-    // },
     '@media screen and (max-width: 768px)': {
       width: 200,
       '& span': {

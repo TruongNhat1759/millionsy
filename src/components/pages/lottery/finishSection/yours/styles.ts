@@ -4,7 +4,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     maxWidth: 975,
     margin: '0 auto',
     background: '#303030',
-    borderRadius: 20,
+    borderRadius: 10,
     border: '1px solid #17F0FF',
     overflow: 'hidden',
     // '@media screen and (max-width: 1640px)': {
@@ -22,14 +22,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       color: '#F4E0FF',
 
     },
-    // '@media screen and (max-width: 1640px)': {
-    //   padding: '2.5vw 3vw',
-    //   '& .title': {
-    //     fontSize: '2vw',
-    //   },
-    // },
     '@media screen and (max-width: 768px)': {
-      padding: '1.25rem 1rem 1.25rem',
+      padding: '1rem',
       '& .title': {
         fontSize: 20,
       },
@@ -91,7 +85,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
 
     '& .listRound': {
-      maxHeight: 390,
+      maxHeight: 300,
       overflowY: 'auto',
       '& li': {
         display: 'flex',

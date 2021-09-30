@@ -4,7 +4,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     maxWidth: 700,
     margin: '0 auto',
     background: '#303030',
-    borderRadius: 20,
+    borderRadius: 10,
     border: '1px solid #17F0FF',
     overflow: 'hidden',
     // '@media screen and (max-width: 1640px)': {
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      marginBottom: '1.25rem',
+      marginBottom: '1rem',
       '& .title': {
         fontSize: 20,
         fontWeight: 700,
@@ -42,6 +42,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         gap: '1.5rem',
         '& li': {
           cursor: 'pointer',
+          '& svg': {
+            maxWidth: 20,
+          },
           '&:hover path': {
             fill: '#fff',
           },
@@ -81,11 +84,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         },
       },
     },
-    '@media screen and (max-width: 1024px)': {
-      padding: '2.5vw 3vw',
-    },
     '@media screen and (max-width: 768px)': {
-      padding: '1.25rem 1rem',
+      padding: '1rem',
     },
   },
   infoRound: {
@@ -104,7 +104,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       background: 'rgba(140, 36, 191, 0.5)',
       borderRadius: 5,
       width: 100,
-      padding: '0.5rem 0',
+      padding: '0.6rem 0',
       textAlign: 'center',
     },
     // '@media screen and (max-width: 1640px)': {
@@ -182,13 +182,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
           }
         },
       },
-      // '@media screen and (max-width: 1640px)': {
-      //   padding: '2.5vw 3vw',
-      //   gap: '3vw',
-      //   '& .text': {
-      //     fontSize: '2vw',
-      //   },
-      // },
       '@media screen and (max-width: 768px)': {
         display: 'block',
         padding: '1.25rem 1rem',
@@ -470,7 +463,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     //   },
     // },
     '@media screen and (max-width: 768px)': {
-      padding: '1rem',
+      padding: '0.75rem 1rem',
       fontSize: 16,
       '& span': {
         bottom: 0,

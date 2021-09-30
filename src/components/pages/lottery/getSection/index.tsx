@@ -63,7 +63,7 @@ const GetSection: React.FC = () => {
       <div className={`${classes.container}`}>
         <h3>HOW TO GET IN</h3>
         <ul className={`${classes.listCard}`}>
-          {DataItemCards.map((el) => (<li key={el.title} className={classes.item}>{ handleRenderCard(el) }</li>))}
+          {DataItemCards.map((el, index) => (<li key={index} className={classes.item}>{ handleRenderCard(el) }</li>))}
         </ul>
       </div>
     </div>

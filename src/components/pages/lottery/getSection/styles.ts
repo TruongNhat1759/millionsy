@@ -2,38 +2,33 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core';
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
     background: '#070514',
-    padding: '7.5rem 0 8.5rem',
+    padding: '4.5rem 0',
     '& h3': {
       color: '#D47DFF',
       fontSize: 48,
       fontWeight: 700,
-      marginBottom: '4rem',
+      marginBottom: '5rem',
       textAlign: 'center',
       textTransform: 'uppercase',
-      // '@media screen and (max-width: 1640px)': {
-      //   fontSize: '4vw',
-      //   marginBottom: '2vw',
-      // },
+      '@media screen and (max-width: 1236px)': {
+        marginBottom: '4rem',
+      },
       '@media screen and (max-width: 768px)': {
-        fontSize: 30,
-        marginBottom: '2.5rem',
+        fontSize: 24,
+        marginBottom: '2rem',
       },
     },
-    // '@media screen and (max-width: 1640px)': {
-    //   padding: '7vw 0 8vw',
-    // },
+    '@media screen and (max-width: 1640px)': {
+      padding: '4.5rem 3%',
+    },
     '@media screen and (max-width: 768px)': {
-      padding: '3rem 0 6rem',
+      padding: '3rem 3% 6rem',
     },
   },
   container: {
-    maxWidth: 1556,
+    maxWidth: 1110,
     margin: '0 auto',
     transition: 'all 0.2s ease',
-    '@media screen and (max-width: 1024px)': {
-      padding: '0 3%',
-    },
-
     '@media screen and (max-width: 768px)': {
       maxWidth: 425,
     }
@@ -42,20 +37,17 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     display: 'flex',
     justifyContent: 'space-between',
     flexWrap: 'wrap',
-    rowGap: '2.5rem',
-    '@media screen and (max-width: 1236px)': {
-      rowGap: '1.25rem',
-    },
+    rowGap: '1rem',
     '@media screen and (max-width: 768px)': {
       rowGap: '0',
     },
   },
   item: {
-    padding: '1.75rem',
+    padding: '1.5rem',
     borderRadius: 10,
     background: '#0E0E0E',
     border: '1px solid #3B6294',
-    width: '32%',
+    width: '32.5%',
     boxSizing: 'border-box',
     position: 'relative',
     '& a': {
@@ -63,27 +55,23 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       position: 'absolute',
       right: 0,
       bottom: 0,
-      padding: '1.25rem 1.75rem',
+      padding: '0.75rem',
       transition: 'all 0.2s ease',
       '&:hover': {
         opacity: 0.8,
       }
     },
-
-    // '@media screen and (max-width: 1640px)': {
-    //   padding: '1.5rem',
-    // },
     '@media screen and (max-width: 1236px)': {
       width: '49%',
     },
     '@media screen and (max-width: 768px)': {
       width: '100%',
       border: 'none',
-      padding: 0,
       textAlign: 'center',
       background: 'transparent',
+      padding: '0 1rem',
       '& + &': {
-        marginTop: '3.25rem'
+        marginTop: '2rem'
       },
       '& a': {
         display: 'none',
@@ -107,24 +95,19 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     fontSize: 24,
     fontWeight: 700,
     marginBottom: '1rem',
-    // '@media screen and (max-width: 1640px)': {
-    //   fontSize: '2.1vw',
-    //   marginBottom: '1vw',
-    // },
     '@media screen and (max-width: 768px)': {
-      fontSize: 24,
+      fontSize: 20,
       marginBottom: '0.5rem',
     },
   },
   content: {
     display: 'block',
-    lineHeight: '1.4rem',
-    // '@media screen and (max-width: 1640px)': {
-    //   fontSize: '16px',
-    // },
+    lineHeight: '1.2rem',
     fontSize: 14,
+    color: '#F4E0FF',
     '@media screen and (max-width: 768px)': {
-      lineHeight: '1.2rem',
+      fontSize: 12,
+      lineHeight: '1rem',
     },
   },
 }));

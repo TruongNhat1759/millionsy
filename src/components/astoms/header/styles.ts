@@ -1,4 +1,5 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core';
+import { NONAME } from 'dns';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
@@ -7,7 +8,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     top: 0,
     left: 0,
     background: '#071526',
-    padding: '0.75rem 0',
+    padding: '0.5rem 0',
     borderBottom: '1px solid #0B7880',
     display: 'flex',
     alignItems: 'center',
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      gap: '2rem',
+      gap: '2.75rem',
       '& a': {
         display: 'inline-block',
         fontSize: 16,
@@ -33,18 +34,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         '&.active': {
           color: '#B2FAFF',
           fontWeight: 700,
-          '& path': {
-            fill: '#B2FAFF'
-          }
         },
-        '& span': {
-          display: 'none',
-          '@media screen and (max-width: 768px)': {
-            display: 'block',
-            textAlign: 'center',
-            paddingBottom: '0.25rem',
-          }
-        },
+
         // '@media screen and (max-width: 1640px)': {
         //   fontSize: '1.5vw',
         // },
@@ -57,16 +48,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         }
       },
       '@media screen and (max-width: 768px)': {
-        position: 'fixed',
-        bottom: 0,
-        width: '100%',
-        left: 0,
-        justifyContent: 'space-evenly',
-        padding: '0.55rem 0',
-        borderTop: '1px solid #0B7880',
-        background: '#071526',
-        zIndex: 99,
-        color: '#F4E0FF',
+        display: 'none',
       }
     },
 
@@ -81,7 +63,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    maxWidth: 1640,
+    maxWidth: 1560,
     width: '100%',
     margin: '0 auto',
     transition: 'all 0.2s ease',

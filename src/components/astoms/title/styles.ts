@@ -8,8 +8,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     fontFamily: '\'Bungee\', cursive',
     fontWeight: 400,
     transition: 'all 0.2s ease',
-    '@media screen and (max-width: 1280px)': {
-      fontSize: 40,
+    '@media screen and (max-width: 1340px)': {
+      fontSize: 46,
     },
     '@media screen and (max-width: 768px)': {
       fontSize: 32,
