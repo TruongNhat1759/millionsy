@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     maxWidth: 1640,
     margin: '0 auto',
     transition: 'all 0.2s ease',
-    '@media screen and (max-width: 1024px)': {
+    '@media screen and (max-width: 1640px)': {
       padding: '0 3%',
     },
   },
