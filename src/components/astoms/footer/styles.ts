@@ -3,10 +3,10 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core';
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
     background: '#071526',
-    padding: '5.25rem 0 0',
+    padding: '5.25rem 0 8rem',
     borderTop: '1px solid #0B7880',
     '@media screen and (max-width: 1640px)': {
-      padding: '5.25rem 3% 0',
+      padding: '5.25rem 3% 8rem',
     },
     '@media screen and (max-width: 768px)': {
       padding: '3em 3% 7rem',
@@ -29,6 +29,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       color: '#FFAC0A',
       marginBottom: '1.5rem',
       fontWeight: '700',
+      '@media screen and (max-width: 1920px)': {
+        fontSize: '18px',
+      },
       '@media screen and (max-width: 768px)': {
         fontSize: '14px',
         marginBottom: '0.5rem',
@@ -43,10 +46,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       '&:hover': {
         textDecoration: 'underline'
       },
-      // '@media screen and (max-width: 1640px)': {
-      //   fontSize: '1.5vw',
-      //   lineHeight: '2em',
-      // },
+      '@media screen and (max-width: 1920px)': {
+        fontSize: '18px',
+      },
       '@media screen and (max-width: 768px)': {
         fontSize: '14px',
         lineHeight: '1.72em',
@@ -79,19 +81,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       fontWeight: 400,
     },
     '& .copyright': {
-      fontSize: 14,
+      fontSize: 18,
       paddingBottom: '0.75rem',
       color: '#F4E0FF',
     },
-    // '@media screen and (max-width: 1640px)': {
-    //   marginTop: '2em',
-    //   '& .logo': {
-    //     fontSize: '3vw',
-    //   },
-    //   '& .copyright': {
-    //     fontSize: '1.25vw',
-    //   },
-    // },
 
     '@media screen and (max-width: 768px)': {
       '& .logo': {
@@ -100,7 +93,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       '& .copyright': {
         fontSize: '12px',
         paddingBottom: '4px',
-        color: '#C5C5C5',
       },
     },
 
