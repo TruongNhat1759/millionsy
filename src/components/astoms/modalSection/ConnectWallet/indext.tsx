@@ -16,7 +16,7 @@ const ConnectWallet: React.FC = () => {
         <ul>
           <li>
             <p>
-              <span><img src="./assets/lottery/wallet_1.png" alt="Coin 98" /></span>
+              <span><img src="/assets/lottery/wallet_1.png" alt="Coin 98" /></span>
               Coin 98
             </p>
             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,7 +26,7 @@ const ConnectWallet: React.FC = () => {
           </li>
           <li>
             <p>
-              <span><img src="./assets/lottery/wallet_2.png" alt="Phantom" /></span>
+              <span><img src="/assets/lottery/wallet_2.png" alt="Phantom" /></span>
               Phantom
             </p>
             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +36,7 @@ const ConnectWallet: React.FC = () => {
           </li>
           <li>
             <p>
-              <span><img src="./assets/lottery/wallet_3.png" alt="Trust" /></span>
+              <span><img src="/assets/lottery/wallet_3.png" alt="Trust" /></span>
               Trust
             </p>
             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@ const ConnectWallet: React.FC = () => {
           </li>
           <li>
             <p>
-              <span><img src="./assets/lottery/wallet_4.png" alt="Sollet" /></span>
+              <span><img src="/assets/lottery/wallet_4.png" alt="Sollet" /></span>
               Sollet
             </p>
             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">

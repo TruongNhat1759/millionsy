@@ -128,7 +128,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       },
       '& span': {
         color: '#F4E0FF',
-        display: 'block',
+        display: 'flex',
+        justifyContent: 'center',
         textAlign: 'center',
         paddingBottom: '0.25rem',
       },

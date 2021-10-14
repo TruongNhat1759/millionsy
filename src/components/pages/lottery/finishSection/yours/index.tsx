@@ -30,7 +30,7 @@ const Yours: React.FC<Props> = ({dataGiveFromYours}) => {
         </p>
         <p>
           <span>{el.your_tickets.length}</span>
-          <span><img src="assets/common/icon_arrow_circle.svg" alt="arrow circle" /></span>
+          <span><img src="/assets/common/icon_arrow_circle.svg" alt="arrow circle" /></span>
         </p>
       </li>
     )

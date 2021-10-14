@@ -365,7 +365,7 @@ const ModalContent: React.FC<Props> = ({dataModal, dataGiveFromModal}) => {
                 },
                 view_your: false,
                 your_ticket: [],
-              })}><img src="assets/common/icon_close.svg" alt="close"/></p>
+              })}><img src="/assets/common/icon_close.svg" alt="close"/></p>
             </div>
             {dataModal.first && dataModal.is_connect ? (<First dataGiveFirst={dataGiveFirst}></First>) : ''}
             {dataModal.second && dataModal.is_connect ? (<Second dataGiveSecond={dataGiveSecond} dataSendSecond={dataTicketModal}></Second>) : ''}

@@ -10,7 +10,7 @@ const PartySection: React.FC<Props> = ({sendDataPartyToLottery}) => {
       <div className={`${classes.container}`}>
         <h3><span>Pump the party</span>$156,728<span>~ 270 SOL</span></h3>
         <p className={`${classes.buyticket}`} onClick={() => sendDataPartyToLottery(true)}>
-          <img src="assets/lottery/ticket.svg" alt="ticket" />
+          <img src="/assets/lottery/ticket.svg" alt="ticket" />
           <span>Buy Ticket</span>
         </p>
       </div>
