@@ -41,60 +41,32 @@ const Millipad: React.FC = () => {
     <>
       <Header dataGiveFromHeader={dataGiveFromHeader}></Header>
       <section className='mb-28 md:mb-36 px-3/100 pt-14 md:pt-4 relative'>
-        <p className='hidden lg:block absolute left-16 top-96'><img src="/assets/millipad/line_left.png" alt="line_left" /></p>
         <div className='max-w-1110 mx-auto'>
-          <p><img src="/assets/millipad/circle_02.png" alt="circle" className='mx-auto -mt-12 sm:-mt-20 md:-mt-32 lg:-mt-40' /></p>
+          <p><img src="/assets/millipad/circle_02.png" alt="circle" className='mx-auto -mt-12 sm:-mt-20 md:-mt-24 lg:-mt-32' /></p>
           <h3 className='text-26 md:text-46 2xl:text-52 text-blue-0 text-center uppercase font-bungee mt-6 md:mt-8 mb-2 2xl:mb-0'>launching game, <br className='block lg:hidden' />nfts and more</h3>
           <p className='text-12 md:text-14 font-normal leading-6 text-center max-w-720 mx-auto mb-6 md:mb-8'>Milipad is an IDO multi-platform, rasing funds for new gaming prjects NFTs and more. With Milipad, you won't need to lock your coins for stacking, simply buy some NFT tickets or do the tasks to participate in IDO rounds for-ever!</p>
           <p className='text-14 md:text-16 bg-blue-0 max-w-max mx-auto py-1 px-5 md:py-3 md:px-10 text-blue-50 rounded-5 font-bold cursor-pointer transition-all hover:opacity-70 mb-8 md:mb-12'>Buy NFTs</p>
-          <p><img src="/assets/millipad/circle_02.png" alt="circle" className='mx-auto' /></p>
+          <p className='animation-pend'><img src="/assets/millipad/circle_02.png" alt="circle" className='mx-auto' /></p>
         </div>
-        <p className='hidden lg:block absolute right-16 top-96'><img src="/assets/millipad/line_right.png" alt="line_right" /></p>
       </section>
       <section className='mb-16 md:mb-28 px-3/100'>
         <h3 className='text-pink-0 font-bungee uppercase text-26 md:text-48 mb-8 md:mb-12 text-center'>upcoming Pools</h3>
         <div className='max-w-1110 mx-auto'>
           <div className='flex flex-wrap justify-center gap-5 2xl:gap-12'>
             <div className='rounded-20 overflow-hidden max-w-345 md:max-w-460 2xl:max-w-500'>
-              <p><img src="/assets/millipad/under_img.png" alt="millionsy" /></p>
-              <div className='bg-gray-0 p-3 md:px-6 md:py-4'>
-                <h4 className=' text-pink-0 font-bungee uppercase leading-none md:leading-normal text-30 md:mb-3'>millionsy</h4>
-                <p className='text-12 md:text-14 text-pink-50 mb-4'>The first crosschain Lottery platorm with NFT ticket</p>
-                <p className='text-14 text-blue-0 text-right font-bold'>Coming...</p>
-                <p className='h-px mt-2 mb-3 md:my-4 bg-pink-100'></p>
-                <dl className='flex justify-between items-center'>
-                  <dt className='text-pink-50 font-bold text-14 rounded-5 cursor-pointer hover:bg-pink-50 transition-all hover:text-gray-0 border border-pink-50 inline-block py-1 px-6 border-solid'><Link to='/millipad/millionsy'>Solana</Link></dt>
-                  <dd className='text-blue-0 text-16 md:text-18 leading-none md:leading-normal font-bold text-right'><span className='block md:inline'>Total raise:</span> 200,000 USDT</dd>
-                </dl>
-              </div>
-            </div>
-
-            <div className='rounded-20 overflow-hidden max-w-345 md:max-w-460 2xl:max-w-500'>
-              <p><img src="/assets/millipad/under_img.png" alt="millionsy" /></p>
-              <div className='bg-gray-0 p-3 md:px-6 md:py-4'>
-                <h4 className=' text-pink-0 font-bungee uppercase leading-none md:leading-normal text-30 md:mb-3'>millionsy</h4>
-                <p className='text-12 md:text-14 text-pink-50 mb-4'>The first crosschain Lottery platorm with NFT ticket</p>
-                <p className='text-14 text-blue-0 text-right font-bold'>Coming...</p>
-                <p className='h-px mt-2 mb-3 md:my-4 bg-pink-100'></p>
-                <dl className='flex justify-between items-center'>
-                  <dt className='text-pink-50 font-bold text-14 rounded-5 cursor-pointer hover:bg-pink-50 transition-all hover:text-gray-0 border border-pink-50 inline-block py-1 px-6 border-solid'><Link to='/millipad/millionsy'>Solana</Link></dt>
-                  <dd className='text-blue-0 text-16 md:text-18 leading-none md:leading-normal font-bold text-right'><span className='block md:inline'>Total raise:</span> 200,000 USDT</dd>
-                </dl>
-              </div>
-            </div>
-
-            <div className='rounded-20 overflow-hidden max-w-345 md:max-w-460 2xl:max-w-500'>
-              <p><img src="/assets/millipad/under_img.png" alt="millionsy" /></p>
-              <div className='bg-gray-0 p-3 md:px-6 md:py-4'>
-                <h4 className=' text-pink-0 font-bungee uppercase leading-none md:leading-normal text-30 md:mb-3'>millionsy</h4>
-                <p className='text-12 md:text-14 text-pink-50 mb-4'>The first crosschain Lottery platorm with NFT ticket</p>
-                <p className='text-14 text-blue-0 text-right font-bold'>Coming...</p>
-                <p className='h-px mt-2 mb-3 md:my-4 bg-pink-100'></p>
-                <dl className='flex justify-between items-center'>
-                  <dt className='text-pink-50 font-bold text-14 rounded-5 cursor-pointer hover:bg-pink-50 transition-all hover:text-gray-0 border border-pink-50 inline-block py-1 px-6 border-solid'><Link to='/millipad/millionsy'>Solana</Link></dt>
-                  <dd className='text-blue-0 text-16 md:text-18 leading-none md:leading-normal font-bold text-right'><span className='block md:inline'>Total raise:</span> 200,000 USDT</dd>
-                </dl>
-              </div>
+              <Link to='/millipad/millionsy' className='block transition-all hover:opacity-70'>
+                <p><img src="/assets/millipad/under_img.png" alt="millionsy" /></p>
+                <div className='bg-gray-0 p-3 md:px-6 md:py-4'>
+                  <h4 className=' text-pink-0 font-bungee uppercase leading-none md:leading-normal text-30 md:mb-3'>millionsy</h4>
+                  <p className='text-12 md:text-14 text-pink-50 mb-4'>The first crosschain Lottery platorm with NFT ticket</p>
+                  <p className='text-14 text-blue-0 text-right font-bold'>Coming...</p>
+                  <p className='h-px mt-2 mb-3 md:my-4 bg-pink-100'></p>
+                  <dl className='flex justify-between items-center'>
+                    <dt className='text-pink-50 font-bold text-14 rounded-5 border inline-block py-1 px-6 border-solid'>Solana</dt>
+                    <dd className='text-blue-0 text-16 md:text-18 leading-none md:leading-normal font-bold text-right'><span className='block md:inline'>Total raise:</span> 200,000 USDT</dd>
+                  </dl>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
