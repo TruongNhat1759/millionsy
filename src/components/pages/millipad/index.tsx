@@ -54,7 +54,7 @@ const Millipad: React.FC = () => {
         <div className='max-w-1110 mx-auto'>
           <div className='flex flex-wrap justify-center gap-5 2xl:gap-12'>
             <div className='rounded-20 overflow-hidden max-w-345 md:max-w-460 2xl:max-w-500'>
-              <Link to='/millipad/millionsy' className='block transition-all hover:opacity-70'>
+              <Link to='/millipad/millionsy' className='block transition-all hover:opacity-70 rounded-20 overflow-hidden'>
                 <p><img src="/assets/millipad/under_img.png" alt="millionsy" /></p>
                 <div className='bg-gray-0 p-3 md:px-6 md:py-4'>
                   <h4 className=' text-pink-0 font-bungee uppercase leading-none md:leading-normal text-30 md:mb-3'>millionsy</h4>

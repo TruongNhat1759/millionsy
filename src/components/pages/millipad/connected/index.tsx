@@ -85,7 +85,7 @@ const MillipadConnected: React.FC = () => {
   const [countDown, setCountDown] = useState(Number);
   const [windowOnLoad, setWindowOnLoad] = useState(false);
   useEffect(() => {
-    setCountDown(new Date('Oct 18, 2021 16:30:00').getTime());
+    setCountDown(new Date('Oct 18, 2021 13:45:00').getTime());
     setWindowOnLoad(true);
   }, [])
 
@@ -105,7 +105,7 @@ const MillipadConnected: React.FC = () => {
               isWindSale: false,
               distribution: false,
             })
-            setCountDown(new Date('Oct 18, 2021 16:30:05').getTime());
+            setCountDown(new Date('Oct 18, 2021 13:45:05').getTime());
           }
           if(flagStartRound.lottery) {
             setFlagStartRound({
@@ -115,7 +115,7 @@ const MillipadConnected: React.FC = () => {
               isWindSale: true,
               distribution: false,
             })
-            setCountDown(new Date('Oct 18, 2021 16:30:10').getTime());
+            setCountDown(new Date('Oct 18, 2021 13:45:10').getTime());
           }
           if(flagStartRound.saleRound) {
             setFlagStartRound({
@@ -125,7 +125,7 @@ const MillipadConnected: React.FC = () => {
               isWindSale: false,
               distribution: true,
             })
-            setCountDown(new Date('Oct 18, 2021 16:30:15').getTime());
+            setCountDown(new Date('Oct 18, 2021 13:45:15').getTime());
           }
         }
         if (distance > 0) {
@@ -198,7 +198,7 @@ const MillipadConnected: React.FC = () => {
             <p className='text-pink-50 text-12 md:text-14 font-normal text-justify md:text-left mb-2'>The more slots you have, the more chance for you to win the whitelist (not the chance to purchase the whitelist). Each wallet address can only have a maximum of 1 ticket to buy whitelist in each pool/ project.</p>
             <p className='block md:hidden h-px bg-gray-250 mt-4 mb-2'></p>
             <p className='text-pink-50 text-12 md:text-14 font-normal text-justify md:text-left mb-4 md:mb-8 flex justify-between items-end md:block'><span className='pb-0.5 md:pb-0'>You have</span><span><span className='text-pink-0 font-bold text-18 inline-block ml-8 mr-2'>
-              {flagSlots.telegram.waggle + flagSlots.telegram.millionsy + flagSlots.telegram.retweet + flagSlots.twitter.waggle + flagSlots.twitter.millionsy + flagSlots.twitter.retweet} slots</span>from Social tasks</span></p>
+              {flagSlots.telegram.waggle + flagSlots.telegram.millionsy + flagSlots.twitter.waggle + flagSlots.twitter.millionsy} slots</span>from Social tasks</span></p>
           </div>
           <div className='bg-gray-200 pt-5 md:pt-6'>
             <h5 className='text-16 mb-5 md:mb-6 text-pink-0 font-bold px-4 md:px-8'>Social Tasks</h5>
@@ -211,7 +211,7 @@ const MillipadConnected: React.FC = () => {
               >
                 <span className='mr-3'><img src="/assets/millipad/icon_telegram.svg" alt="icon_telegram" /></span>
                 <span className='font-bold text-14 w-40 text-blue-0'>Telegram Tasks</span>
-                <span className='text-blue-200 ml-auto md:ml-0'>{flagSlots.telegram.waggle + flagSlots.telegram.millionsy + flagSlots.telegram.retweet}/3 slots collected</span>
+                <span className='text-blue-200 ml-auto md:ml-0'>{flagSlots.telegram.waggle + flagSlots.telegram.millionsy}/2 slots collected</span>
               </li> 
               <li className={`flex items-center text-12 cursor-pointer transition-all px-4 md:px-8 py-3 leading-7 ${selectedTickets === 'twitter' ? 'bg-blue-100' : 'opacity-50 hover:bg-blue-100 hover:opacity-100'}`}
                 onClick={() => {
@@ -221,7 +221,7 @@ const MillipadConnected: React.FC = () => {
               >
                 <span className='mr-3'><img src="/assets/millipad/icon_twitter.svg" alt="icon_twitter" /></span>
                 <span className='font-bold text-14 w-40 text-blue-0'>Twitter Tasks</span>
-                <span className='text-blue-200 ml-auto md:ml-0'>{flagSlots.twitter.waggle + flagSlots.twitter.millionsy + flagSlots.twitter.retweet}/3 slots collected</span>
+                <span className='text-blue-200 ml-auto md:ml-0'>{flagSlots.twitter.waggle + flagSlots.twitter.millionsy}/2 slots collected</span>
               </li>
             </ul>
           </div>
@@ -420,8 +420,8 @@ const MillipadConnected: React.FC = () => {
                   }}
                 >
                   <p className={`leading-5 ${flagOnclick.telegram.waggle ? '' : 'opacity-50'}`}>
-                    <span className='text-16 text-pink-0 font-bold'><span className='mr-2'>1.</span>Waggle Network</span>
-                    <span className='text-14 text-pink-50 block pl-6'>Twitter Follow</span>
+                    <span className='text-16 text-pink-0 font-bold'><span className='mr-2'>1.</span>MILLIONSY</span>
+                    <span className='text-14 text-pink-50 block pl-6'>Join group</span>
                   </p>
                   <p className='leading-4 flex items-center flex-col'>
                     <span>
@@ -452,7 +452,7 @@ const MillipadConnected: React.FC = () => {
                 >
                   <p className={`leading-5 ${flagOnclick.telegram.millionsy ? '' : 'opacity-50'}`}>
                     <span className='text-16 text-pink-0 font-bold'><span className='mr-2'>2.</span>MILLIONSY</span>
-                    <span className='text-14 text-pink-50 block pl-6'>Twitter Follow</span>
+                    <span className='text-14 text-pink-50 block pl-6'>Join channel</span>
                   </p>
                   <p className='leading-4 flex items-center flex-col'>
                     <span>
@@ -464,43 +464,19 @@ const MillipadConnected: React.FC = () => {
                   </p>
                 </a>
               </li>
-              <li>
-                <a href='/' target='_blank' className={`flex justify-between items-center py-3.5 border-b border-solid border-gray-550 ${flagOnclick.telegram.retweet ? '' : 'cursor-default'}`}
-                  onClick={(event) => {
-                    if(!flagOnclick.telegram.retweet) {
-                      event.preventDefault()
-                    } else {
-                      setIsNextStep(true);
-                      setFlagSlots({
-                        ...flagSlots,
-                        telegram: {
-                          ...flagSlots.telegram,
-                          retweet: 1,
-                        }
-                      })
-                    }
-                  }}
-                >
-                  <p className={`leading-5 ${flagOnclick.telegram.retweet ? '' : 'opacity-50'}`}>
-                    <span className='text-16 text-pink-0 font-bold'><span className='mr-2'>3.</span>Retweet</span>
-                    <span className='text-14 text-pink-50 block pl-6'>We will manually check you action.</span>
-                  </p>
-                  <p className='leading-4 flex items-center flex-col'>
-                    <span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM16.116 9.30987L16.544 10.4858C16.6179 10.6889 16.6061 10.9089 16.5108 11.1053C16.4155 11.3017 16.248 11.4509 16.0393 11.5254L14.5134 12.0702L14.599 12.4407C14.6995 12.8754 14.4184 13.3129 13.9724 13.4159L12.1987 13.8259L5.25855 15.43C4.81257 15.5331 4.36804 15.2634 4.26757 14.8287L3.98587 13.6099C3.95559 13.4789 4.03867 13.3472 4.17254 13.314C4.66311 13.192 4.97196 12.7022 4.86101 12.2222C4.75006 11.7422 4.25762 11.4376 3.76328 11.5433C3.62839 11.5721 3.49592 11.4902 3.46564 11.3592L3.18394 10.1404C3.08347 9.70577 3.36455 9.26831 3.81051 9.16518L4.9513 8.9015C5.04712 8.70808 5.21318 8.56106 5.41982 8.48728L13.8396 5.48079C14.0484 5.40629 14.2734 5.41531 14.4733 5.50624C14.6731 5.59721 14.8239 5.75918 14.8979 5.96233L15.3258 7.13826C15.3718 7.26466 15.3052 7.4049 15.1761 7.45342C14.7031 7.63118 14.4554 8.15261 14.624 8.61575C14.7925 9.07889 15.3191 9.3239 15.7978 9.16181C15.9284 9.1176 16.07 9.18348 16.116 9.30987ZM14.0339 12.2414L13.9222 11.7578L13.9222 11.7578L13.8745 11.5516C13.5858 11.5639 13.3011 11.4908 13.0534 11.3378C12.7343 11.1408 12.5127 10.8336 12.4293 10.4729C12.3459 10.1121 12.4102 9.73888 12.6105 9.42185C12.766 9.17565 12.9897 8.98499 13.2546 8.86937L13.0227 7.86634C12.9835 7.69645 12.8097 7.59103 12.6354 7.63131L11.108 7.98435L11.7838 10.908C11.8144 11.0406 11.729 11.1735 11.5929 11.205C11.4569 11.2364 11.3217 11.1544 11.2911 11.0218L10.6153 8.0982L5.37825 9.30868L4.88518 9.42265L3.9215 9.64539C3.7472 9.68568 3.63735 9.85667 3.67661 10.0265L3.90845 11.0296C4.19715 11.0172 4.48181 11.0904 4.72959 11.2434C5.04867 11.4404 5.2703 11.7475 5.35368 12.1083C5.43706 12.469 5.3727 12.8423 5.17244 13.1593C5.01694 13.4055 4.79323 13.5962 4.52841 13.7118L4.76024 14.7148C4.79951 14.8847 4.97327 14.9901 5.14755 14.9498L7.01438 14.5183L8.83746 14.097L11.8414 13.4026L11.7606 13.0532L11.7373 12.9525C11.7067 12.8199 11.7921 12.6869 11.9282 12.6555C12.0642 12.624 12.1993 12.706 12.23 12.8386L12.24 12.882L12.334 13.2888L13.8614 12.9358C14.0357 12.8955 14.1456 12.7245 14.1063 12.5546L14.0339 12.2414ZM15.8707 11.0621C15.9523 11.033 16.0177 10.9747 16.055 10.8979C16.0922 10.8212 16.0968 10.7352 16.0679 10.6558L15.7157 9.68802C15.4302 9.73366 15.1383 9.69413 14.8734 9.57111C14.5322 9.41271 14.2746 9.13378 14.1479 8.78572C14.0213 8.43767 14.04 8.06008 14.2006 7.72251C14.3254 7.46038 14.5247 7.24541 14.774 7.10008L14.4218 6.1323C14.3929 6.05291 14.334 5.98959 14.2559 5.95406C14.1777 5.91852 14.0897 5.91499 14.0082 5.94412L7.1475 8.39385L10.7506 7.56104L12.5244 7.15106C12.9704 7.04798 13.4149 7.31773 13.5154 7.7524L13.7971 8.97118C13.8273 9.1022 13.7443 9.23392 13.6104 9.26722C13.1198 9.38918 12.811 9.87892 12.9219 10.359C13.0329 10.839 13.5253 11.1436 14.0197 11.0379C14.1546 11.009 14.287 11.091 14.3173 11.222L14.4016 11.5867L15.8707 11.0621Z" fill={`${flagOnclick.telegram.retweet ? '#17F0FF' : '#878787'}`}/>
-                      </svg>
-                    </span>
-                    <span className={`text-10 ${flagOnclick.telegram.retweet ? 'text-blue-200' : 'text-gray-500'}`}>1 slot</span>
-                  </p>
-                </a>
+              <li className='flex justify-between items-center py-3.5 border-b border-solid border-gray-550'>
+                <p className={`leading-5 ${flagOnclick.telegram.retweet ? '' : 'opacity-50'}`}>
+                  <span className='text-16 text-pink-0 font-bold'><span className='mr-2'>3.</span>Claim slots</span>
+                  <span className='text-14 text-pink-50 block pl-6'>We will check your actions</span>
+                </p>
               </li>
             </ul>
             <p className={`mt-3 w-140 mx-auto text-center text-16 py-2 font-bold rounded-5 transition-all  ${
-              flagSlots.telegram.waggle + flagSlots.telegram.millionsy + flagSlots.telegram.retweet === 3 ? 'bg-blue-0 text-blue-50 hover:opacity-70 cursor-pointer' : 
+              flagSlots.telegram.retweet ? 'bg-blue-0 text-blue-50 hover:opacity-70 cursor-pointer' : 
               isNextStep ? 'bg-pink-150 text-pink-50 hover:opacity-70 cursor-pointer' : 'bg-gray-550 text-gray-50 pointer-events-none'
             }`}
               onClick={() => {
+                setIsNextStep(!isNextStep);
                 if(isNextStep) {
                   if(flagOnclick.telegram.waggle) {
                     setFlagOnclick({
@@ -521,8 +497,11 @@ const MillipadConnected: React.FC = () => {
                     })
                   }
                 }
+                if (flagOnclick.telegram.retweet) {
+                  setShowModalTicket(false);
+                }
               }}
-            >{flagSlots.telegram.waggle + flagSlots.telegram.millionsy + flagSlots.telegram.retweet === 3 ? (<>Claim slots</>) : (<>Next step</>)}</p>
+            >{flagOnclick.telegram.retweet ? (<>Claim slots</>) : (<>Next step</>)}</p>
           </div>
         </div>
         <div className={`${selectedTickets === 'twitter' ? 'block' : 'hidden'} bg-gray-450 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 max-h-full z-1000 overflow-hidden border border-solid border-blue-0 rounded-20 max-w-320 w-full`}>
@@ -586,7 +565,7 @@ const MillipadConnected: React.FC = () => {
                 >
                   <p className={`leading-5 ${flagOnclick.twitter.millionsy ? '' : 'opacity-50'}`}>
                     <span className='text-16 text-pink-0 font-bold'><span className='mr-2'>2.</span>MILLIONSY</span>
-                    <span className='text-14 text-pink-50 block pl-6'>Twitter Follow</span>
+                    <span className='text-14 text-pink-50 block pl-6'>Retweet, like and comment</span>
                   </p>
                   <p className='leading-4 flex items-center flex-col'>
                     <span>
@@ -598,43 +577,19 @@ const MillipadConnected: React.FC = () => {
                   </p>
                 </a>
               </li>
-              <li>
-                <a href='/' target='_blank' className={`flex justify-between items-center py-3.5 border-b border-solid border-gray-550 ${flagOnclick.twitter.retweet ? '' : 'cursor-default'}`}
-                  onClick={(event) => {
-                    if(!flagOnclick.twitter.retweet) {
-                      event.preventDefault()
-                    } else {
-                      setIsNextStep(true);
-                      setFlagSlots({
-                        ...flagSlots,
-                        twitter: {
-                          ...flagSlots.twitter,
-                          retweet: 1,
-                        }
-                      })
-                    }
-                  }}
-                >
-                  <p className={`leading-5 ${flagOnclick.twitter.retweet ? '' : 'opacity-50'}`}>
-                    <span className='text-16 text-pink-0 font-bold'><span className='mr-2'>3.</span>Retweet</span>
-                    <span className='text-14 text-pink-50 block pl-6'>We will manually check you action.</span>
-                  </p>
-                  <p className='leading-4 flex items-center flex-col'>
-                    <span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM16.116 9.30987L16.544 10.4858C16.6179 10.6889 16.6061 10.9089 16.5108 11.1053C16.4155 11.3017 16.248 11.4509 16.0393 11.5254L14.5134 12.0702L14.599 12.4407C14.6995 12.8754 14.4184 13.3129 13.9724 13.4159L12.1987 13.8259L5.25855 15.43C4.81257 15.5331 4.36804 15.2634 4.26757 14.8287L3.98587 13.6099C3.95559 13.4789 4.03867 13.3472 4.17254 13.314C4.66311 13.192 4.97196 12.7022 4.86101 12.2222C4.75006 11.7422 4.25762 11.4376 3.76328 11.5433C3.62839 11.5721 3.49592 11.4902 3.46564 11.3592L3.18394 10.1404C3.08347 9.70577 3.36455 9.26831 3.81051 9.16518L4.9513 8.9015C5.04712 8.70808 5.21318 8.56106 5.41982 8.48728L13.8396 5.48079C14.0484 5.40629 14.2734 5.41531 14.4733 5.50624C14.6731 5.59721 14.8239 5.75918 14.8979 5.96233L15.3258 7.13826C15.3718 7.26466 15.3052 7.4049 15.1761 7.45342C14.7031 7.63118 14.4554 8.15261 14.624 8.61575C14.7925 9.07889 15.3191 9.3239 15.7978 9.16181C15.9284 9.1176 16.07 9.18348 16.116 9.30987ZM14.0339 12.2414L13.9222 11.7578L13.9222 11.7578L13.8745 11.5516C13.5858 11.5639 13.3011 11.4908 13.0534 11.3378C12.7343 11.1408 12.5127 10.8336 12.4293 10.4729C12.3459 10.1121 12.4102 9.73888 12.6105 9.42185C12.766 9.17565 12.9897 8.98499 13.2546 8.86937L13.0227 7.86634C12.9835 7.69645 12.8097 7.59103 12.6354 7.63131L11.108 7.98435L11.7838 10.908C11.8144 11.0406 11.729 11.1735 11.5929 11.205C11.4569 11.2364 11.3217 11.1544 11.2911 11.0218L10.6153 8.0982L5.37825 9.30868L4.88518 9.42265L3.9215 9.64539C3.7472 9.68568 3.63735 9.85667 3.67661 10.0265L3.90845 11.0296C4.19715 11.0172 4.48181 11.0904 4.72959 11.2434C5.04867 11.4404 5.2703 11.7475 5.35368 12.1083C5.43706 12.469 5.3727 12.8423 5.17244 13.1593C5.01694 13.4055 4.79323 13.5962 4.52841 13.7118L4.76024 14.7148C4.79951 14.8847 4.97327 14.9901 5.14755 14.9498L7.01438 14.5183L8.83746 14.097L11.8414 13.4026L11.7606 13.0532L11.7373 12.9525C11.7067 12.8199 11.7921 12.6869 11.9282 12.6555C12.0642 12.624 12.1993 12.706 12.23 12.8386L12.24 12.882L12.334 13.2888L13.8614 12.9358C14.0357 12.8955 14.1456 12.7245 14.1063 12.5546L14.0339 12.2414ZM15.8707 11.0621C15.9523 11.033 16.0177 10.9747 16.055 10.8979C16.0922 10.8212 16.0968 10.7352 16.0679 10.6558L15.7157 9.68802C15.4302 9.73366 15.1383 9.69413 14.8734 9.57111C14.5322 9.41271 14.2746 9.13378 14.1479 8.78572C14.0213 8.43767 14.04 8.06008 14.2006 7.72251C14.3254 7.46038 14.5247 7.24541 14.774 7.10008L14.4218 6.1323C14.3929 6.05291 14.334 5.98959 14.2559 5.95406C14.1777 5.91852 14.0897 5.91499 14.0082 5.94412L7.1475 8.39385L10.7506 7.56104L12.5244 7.15106C12.9704 7.04798 13.4149 7.31773 13.5154 7.7524L13.7971 8.97118C13.8273 9.1022 13.7443 9.23392 13.6104 9.26722C13.1198 9.38918 12.811 9.87892 12.9219 10.359C13.0329 10.839 13.5253 11.1436 14.0197 11.0379C14.1546 11.009 14.287 11.091 14.3173 11.222L14.4016 11.5867L15.8707 11.0621Z" fill={`${flagOnclick.twitter.retweet ? '#17F0FF' : '#878787'}`}/>
-                      </svg>
-                    </span>
-                    <span className={`text-10 ${flagOnclick.twitter.retweet ? 'text-blue-200' : 'text-gray-500'}`}>1 slot</span>
-                  </p>
-                </a>
+              <li className='flex justify-between items-center py-3.5 border-b border-solid border-gray-550'>
+                <p className={`leading-5 ${flagOnclick.twitter.retweet ? '' : 'opacity-50'}`}>
+                  <span className='text-16 text-pink-0 font-bold'><span className='mr-2'>3.</span>Claim slots</span>
+                  <span className='text-14 text-pink-50 block pl-6'>We will check your actions </span>
+                </p>
               </li>
             </ul>
             <p className={`mt-3 w-140 mx-auto text-center text-16 py-2 font-bold rounded-5 transition-all  ${
-              flagSlots.twitter.waggle + flagSlots.twitter.millionsy + flagSlots.twitter.retweet === 3 ? 'bg-blue-0 text-blue-50 hover:opacity-70 cursor-pointer' : 
+              flagOnclick.twitter.retweet ? 'bg-blue-0 text-blue-50 hover:opacity-70 cursor-pointer' : 
               isNextStep ? 'bg-pink-150 text-pink-50 hover:opacity-70 cursor-pointer' : 'bg-gray-550 text-gray-50 pointer-events-none'
             }`}
               onClick={() => {
+                setIsNextStep(!isNextStep);
                 if(isNextStep) {
                   if(flagOnclick.twitter.waggle) {
                     setFlagOnclick({
@@ -655,8 +610,11 @@ const MillipadConnected: React.FC = () => {
                     })
                   }
                 }
+                if (flagOnclick.twitter.retweet) {
+                  setShowModalTicket(false);
+                }
               }}
-            >{flagSlots.twitter.waggle + flagSlots.twitter.millionsy + flagSlots.twitter.retweet === 3 ? (<>Claim slots</>) : (<>Next step</>)}</p>
+            >{flagOnclick.twitter.retweet ? (<>Claim slots</>) : (<>Next step</>)}</p>
           </div>
         </div>
       </section>
