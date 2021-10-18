@@ -89,56 +89,85 @@ const MillipadConnected: React.FC = () => {
     setWindowOnLoad(true);
   }, [])
 
-  useEffect(() => {
-    if (windowOnLoad) {
-      const second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24;
-      const timer = setInterval(function() {    
-        const now = new Date().getTime();
-        const distance = countDown - now;
-        if (distance < 1000) {
-          clearInterval(timer);
-          if(flagStartRound.whitelist) {
-            setFlagStartRound({
-              whitelist: false,
-              lottery: true,
-              saleRound: false,
-              isWindSale: false,
-              distribution: false,
-            })
-            setCountDown(new Date('Oct 18, 2021 13:45:05').getTime());
-          }
-          if(flagStartRound.lottery) {
-            setFlagStartRound({
-              whitelist: false,
-              lottery: false,
-              saleRound: true,
-              isWindSale: true,
-              distribution: false,
-            })
-            setCountDown(new Date('Oct 18, 2021 13:45:10').getTime());
-          }
-          if(flagStartRound.saleRound) {
-            setFlagStartRound({
-              whitelist: false,
-              lottery: false,
-              saleRound: false,
-              isWindSale: false,
-              distribution: true,
-            })
-            setCountDown(new Date('Oct 18, 2021 13:45:15').getTime());
-          }
-        }
-        if (distance > 0) {
-          setTimeCountDown({
-            days: Math.floor(distance / (day)).toString(),
-            hours: Math.floor((distance % (day)) / (hour)) < 10 ? '0' + Math.floor((distance % (day)) / (hour)) : Math.floor((distance % (day)) / (hour)).toString(),
-            minutes: Math.floor((distance % (hour)) / (minute)) < 10 ? '0' + Math.floor((distance % (hour)) / (minute)) : Math.floor((distance % (hour)) / (minute)).toString(),
-            seconds: Math.floor((distance % (minute)) / second) < 10 ? '0' + Math.floor((distance % (minute)) / second) : Math.floor((distance % (minute)) / second).toString(),
-          })
-        }
-      }, 1000);
+  // useEffect(() => {
+  //   if (windowOnLoad) {
+  //     const second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24;
+  //     const timer = setInterval(function() {    
+  //       const now = new Date().getTime();
+  //       const distance = countDown - now;
+  //       if (distance < 1000) {
+  //         clearInterval(timer);
+  //         if(flagStartRound.whitelist) {
+  //           setFlagStartRound({
+  //             whitelist: false,
+  //             lottery: true,
+  //             saleRound: false,
+  //             isWindSale: false,
+  //             distribution: false,
+  //           })
+  //           setCountDown(new Date('Oct 18, 2021 13:45:05').getTime());
+  //         }
+  //         if(flagStartRound.lottery) {
+  //           setFlagStartRound({
+  //             whitelist: false,
+  //             lottery: false,
+  //             saleRound: true,
+  //             isWindSale: true,
+  //             distribution: false,
+  //           })
+  //           setCountDown(new Date('Oct 18, 2021 13:45:10').getTime());
+  //         }
+  //         if(flagStartRound.saleRound) {
+  //           setFlagStartRound({
+  //             whitelist: false,
+  //             lottery: false,
+  //             saleRound: false,
+  //             isWindSale: false,
+  //             distribution: true,
+  //           })
+  //           setCountDown(new Date('Oct 18, 2021 13:45:15').getTime());
+  //         }
+  //       }
+  //       if (distance > 0) {
+  //         setTimeCountDown({
+  //           days: Math.floor(distance / (day)).toString(),
+  //           hours: Math.floor((distance % (day)) / (hour)) < 10 ? '0' + Math.floor((distance % (day)) / (hour)) : Math.floor((distance % (day)) / (hour)).toString(),
+  //           minutes: Math.floor((distance % (hour)) / (minute)) < 10 ? '0' + Math.floor((distance % (hour)) / (minute)) : Math.floor((distance % (hour)) / (minute)).toString(),
+  //           seconds: Math.floor((distance % (minute)) / second) < 10 ? '0' + Math.floor((distance % (minute)) / second) : Math.floor((distance % (minute)) / second).toString(),
+  //         })
+  //       }
+  //     }, 1000);
+  //   }
+  // }, [countDown])
+  const handleCountDownTest = (event: React.MouseEvent) => {
+    if(flagStartRound.whitelist) {
+      setFlagStartRound({
+        whitelist: false,
+        lottery: true,
+        saleRound: false,
+        isWindSale: false,
+        distribution: false,
+      })
     }
-  }, [countDown])
+    if(flagStartRound.lottery) {
+      setFlagStartRound({
+        whitelist: false,
+        lottery: false,
+        saleRound: true,
+        isWindSale: true,
+        distribution: false,
+      })
+    }
+    if(flagStartRound.saleRound) {
+      setFlagStartRound({
+        whitelist: false,
+        lottery: false,
+        saleRound: false,
+        isWindSale: false,
+        distribution: true,
+      })
+    }
+  }
   return (
     <>
       <Header dataGiveFromHeader={dataGiveFromHeader}></Header>
@@ -171,7 +200,9 @@ const MillipadConnected: React.FC = () => {
                 <li className={`px-4 md:px-6 tablet992:px-12 py-3 text-12 md:text-14 text-pink-50 ${flagStartRound.distribution ? 'bg-purple-100' : ''}`}><span className='text-16 font-bold block md:inline-block'>Distribution<span className='hidden md:inline'>:</span></span> The tokens will be automatically sent to wallets.</li>
               </ul>
               <div className='flex items-center justify-between px-4 md:px-6 tablet992:px-12 py-6 md:py-3'>
-                <p className='text-14 bg-gray-0 border border-solid border-pink-50 rounded-5 py-1 px-5 text-pink-50 font-bold'>Solana</p>
+                <p className='text-14 bg-gray-0 border border-solid border-pink-50 rounded-5 py-1 px-5 text-pink-50 font-bold'
+                  onClick={handleCountDownTest}
+                >Solana</p>
                 <p className='text-14 md:text-16 px-13 pt-2 pb-2.5 rounded-5 font-bold bg-pink-150 text-pink-50 pointer-events-none'>Connected</p>
               </div>
             </div>
